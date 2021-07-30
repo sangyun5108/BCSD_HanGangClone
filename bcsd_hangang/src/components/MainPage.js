@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
-import MainPageSmallHeader from './MainPageSmallHeader';
-import MainPageBigHeader from './MainPageBigHeader';
+import MainBigPage from './MainBigPage';
+import MainSmallPage from './MainSmallPage';
 
 const MainPage = () => {
 
@@ -16,7 +16,7 @@ const MainPage = () => {
     return (
     <>
         {window.addEventListener('resize',checkScreenWidth)}
-        {isMobile?<MainPageSmallHeader/>:<MainPageBigHeader/>}
+        {isMobile?<MainSmallPage/>:<MainBigPage/>}
     </>
     )
 }

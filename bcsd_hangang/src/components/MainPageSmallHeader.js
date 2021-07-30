@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SmallHeaderWrapper = styled.header`
-    height:130px;
+    height:100px;
     position:relative;
 `;
 
@@ -14,12 +14,11 @@ const HanGangImageWrapper = styled.div`
     justify-content:center;
     align-items:center;
     position:absolute;
-    bottom:12px;
-    left:10px;
+    bottom:20px;
 `;
 
 const HanGangImage = styled.img`
-    width:150px;
+    width:100px;
     height:auto;
 `;
 

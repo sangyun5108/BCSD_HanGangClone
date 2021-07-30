@@ -10,14 +10,14 @@ const BigHeaderWrapper = styled.header`
 `;
 
 const BigHeaderLeftContents = styled.nav`
-    width:500px;
+    width:1100px;
     height:80px;
     display:flex;
-    margin-left:200px;
+    margin-left:120px;
 `;
 
-const BigHeaderRightContents = styled(BigHeaderLeftContents)`
-    margin-left:50px;
+const BigHeaderRightContents = styled.nav`
+    display:flex;
     width:300px;
 `;
 
@@ -27,7 +27,7 @@ const HanGangImgWrapper = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
-    margin-right:20px;
+    margin-right:50px;
 `;
 
 const HanGangImg = styled.img`
@@ -65,6 +65,10 @@ const SignUpWrapper = styled(HanGangImgWrapper)`
 `;
 const SignUp = styled(HomeButton)`
 `;
+const NoMeaningWrapper = styled(HanGangImgWrapper)`
+    width:350px;
+    height:80px;
+`;
 
 const MainPageBigHeader = () => {
     return(
@@ -86,14 +90,15 @@ const MainPageBigHeader = () => {
                     <TimeTableWrapper>
                         <TimeTable href='http://www.localhost:3000'>시간표</TimeTable>
                     </TimeTableWrapper>
+                    <NoMeaningWrapper></NoMeaningWrapper>
                 </BigHeaderLeftContents>
                 <BigHeaderRightContents>
                     <LoginWrapper>
                         <Login href='http://www.localhost:3000'>로그인</Login>
                     </LoginWrapper>
-                <SignUpWrapper>
-                        <SignUp href='http://www.localhost:3000'>회원가입</SignUp>
-                </SignUpWrapper>
+                    <SignUpWrapper>
+                            <SignUp href='http://www.localhost:3000'>회원가입</SignUp>
+                    </SignUpWrapper>
                 </BigHeaderRightContents>
             </BigHeaderWrapper>
         </>
