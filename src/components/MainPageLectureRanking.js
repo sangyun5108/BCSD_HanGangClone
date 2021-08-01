@@ -2,15 +2,25 @@ import React,{useState} from 'react';
 import styled from 'styled-components';
 import useGetLectures from '../customHooks/useGetLectures';
 
+const LectureRankingSectionWrapper = styled.section`
+    margin-bottom:10px;
+    @media(min-width:575px){
+        width:1160px;
+        margin:20px 265px 0px 265px;
+    }
+`;
+
 const LectureRankingTitle = styled.div`
-    width:68px;
+    width:75px;
     text-align:center;
     font-size:18px;
-    font-weight:700;
+    font-weight:800;
     margin:0px 0px 10px 35px;
     @media(min-width:575px){
-     margin:0px 0px 10px 135px; 
-     font-weight:500; 
+     margin: 0px 0px 5px 0px;
+     font-weight:700; 
+     font-size:16px;
+     padding-right:15px;
     }
 `;
 
@@ -23,7 +33,7 @@ const LectureRankingWrapper = styled.div`
     @media(min-width:575px){
         width:480px;
         height:392px;
-        margin-left:135px;
+        margin-left:0px;
     }
 `
 const LectureRankingListTitleWrapper = styled.div`
@@ -103,7 +113,7 @@ const LectureRankingListOrderWrapper = styled.div`
         width:60px;   
     }
 `;
-const LectureRankingListRatingAndNameWrapper = styled.div`
+const LectureRankingListContentWrapper = styled.div`
     width:250px;
     display:flex;
     flex-direction:column;
@@ -171,37 +181,39 @@ const MainPageLectureRanking = () => {
     }
 
     return(
-        <>・
-            <LectureRankingTitle>강의랭킹</LectureRankingTitle>
-            <LectureRankingWrapper>
-                <LectureRankingListTitleWrapper>
-                    <LectureRankingListTitleUlWrapper>
-                        {LECTURE_RANKING_LIST.map((list)=>{
+        <> 
+            <LectureRankingSectionWrapper>
+                <LectureRankingTitle>강의랭킹</LectureRankingTitle>
+                <LectureRankingWrapper>
+                    <LectureRankingListTitleWrapper>
+                        <LectureRankingListTitleUlWrapper>
+                            {LECTURE_RANKING_LIST.map((list)=>{
+                                return(
+                                    <LectureRankingListTitle key={list.id}>
+                                        <LectureRankingListTitleContext onClick={(e)=>onClickTitle(e)} id={list.id}>{list.title}</LectureRankingListTitleContext>
+                                    </LectureRankingListTitle>
+                                );
+                            })}
+                        </LectureRankingListTitleUlWrapper>
+                    </LectureRankingListTitleWrapper>
+                    <LectureRankingListUlWrapper>
+                        {selectedLectureList.map((list,index)=>{
                             return(
-                                <LectureRankingListTitle key={list.id}>
-                                    <LectureRankingListTitleContext onClick={(e)=>onClickTitle(e)} id={list.id}>{list.title}</LectureRankingListTitleContext>
-                                </LectureRankingListTitle>
-                            );
+                                <LectureRankingList key={list.id}>
+                                    <LectureRankingListWrapper>
+                                        <LectureRankingListOrderWrapper>{'0'+(index+1)}</LectureRankingListOrderWrapper>
+                                        <LectureRankingListContentWrapper>
+                                            <LectureRankingListNameWrapper>{list.name}</LectureRankingListNameWrapper>
+                                            <LectureRankingListProfessorWrapper>{list.professor}</LectureRankingListProfessorWrapper>
+                                        </LectureRankingListContentWrapper>
+                                        <LectureRankingListRatingWrapper>{Number.isInteger(list.rating)?`${list.rating}.0`:list.rating.toFixed(1)}</LectureRankingListRatingWrapper>
+                                    </LectureRankingListWrapper>
+                                </LectureRankingList>
+                            )
                         })}
-                    </LectureRankingListTitleUlWrapper>
-                </LectureRankingListTitleWrapper>
-                <LectureRankingListUlWrapper>
-                    {selectedLectureList.map((list,index)=>{
-                        return(
-                            <LectureRankingList key={list.id}>
-                                <LectureRankingListWrapper>
-                                    <LectureRankingListOrderWrapper>{'0'+(index+1)}</LectureRankingListOrderWrapper>
-                                    <LectureRankingListRatingAndNameWrapper>
-                                        <LectureRankingListNameWrapper>{list.name}</LectureRankingListNameWrapper>
-                                        <LectureRankingListProfessorWrapper>{list.professor}</LectureRankingListProfessorWrapper>
-                                    </LectureRankingListRatingAndNameWrapper>
-                                    <LectureRankingListRatingWrapper>{Number.isInteger(list.rating)?`${list.rating}.0`:list.rating.toFixed(1)}</LectureRankingListRatingWrapper>
-                                </LectureRankingListWrapper>
-                            </LectureRankingList>
-                        )
-                    })}
-                </LectureRankingListUlWrapper>
-            </LectureRankingWrapper>
+                    </LectureRankingListUlWrapper>
+                </LectureRankingWrapper>
+            </LectureRankingSectionWrapper>
         </>
     )
 }

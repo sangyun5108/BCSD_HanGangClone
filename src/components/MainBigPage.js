@@ -1,45 +1,50 @@
 import React from 'react';
-import MainPageBigHeader from './MainPageBigHeader';
 import MainPageLectureRanking from './MainPageLectureRanking';
 import styled from 'styled-components';
 import MainPageDepartmentList from './MainPageDepartmentList';
 
-const GoHangangImgAndContextWrapper = styled.div`
+const MainBigPageWrapper = styled.main`
+`;
+
+const MainBigPageBannerWrapper = styled.section`
     width:1150px;
     height:320px;
     display:flex;
     padding-top:35px;
     justify-content:space-between;
-    margin:0px 145px 0px 145px;
+    align-items:flex-end;
+    margin: 0px 265px 0px 265px;
 `;
-const GoHangangImg = styled.img`
+const MainBigPageBannerImage = styled.img`
 `;
-const GoHangangContext = styled.div`
+const MainBigPageBannerContext = styled.div`
     height:75px;
-    padding-top:200px;
+    margin-bottom:10px;
 `;
-const GoHangangContextQuestion = styled.div`
+
+const MainBigPageBannerContextQuestion = styled.h1`
     margin-bottom:10px;
     font-size:18px;
 `;
-const GoHangangContextAnswer = styled.div`
-    font-size:40px;
+const MainBigPageBannerContextAnswer = styled.h1`
+    font-size:36px;
     font-weight:600;
 `;
 
 const MainBigPage = () => {
     return(
         <>
-            <MainPageBigHeader/>
-            <GoHangangImgAndContextWrapper>
-                <GoHangangContext>
-                    <GoHangangContextQuestion>솔직한 강의평을 원한다면?</GoHangangContextQuestion>
-                    <GoHangangContextAnswer>가자, 한강으로!</GoHangangContextAnswer>
-                </GoHangangContext>
-                <GoHangangImg src='https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/represent.svg'></GoHangangImg>
-            </GoHangangImgAndContextWrapper>
-            <MainPageDepartmentList/>
-            <MainPageLectureRanking/>
+            <MainBigPageWrapper>
+                <MainBigPageBannerWrapper>
+                    <MainBigPageBannerContext>
+                        <MainBigPageBannerContextQuestion>솔직한 강의평을 원한다면?</MainBigPageBannerContextQuestion>
+                        <MainBigPageBannerContextAnswer>가자, 한강으로!</MainBigPageBannerContextAnswer>
+                    </MainBigPageBannerContext>
+                    <MainBigPageBannerImage src='https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/represent.svg'></MainBigPageBannerImage>
+                </MainBigPageBannerWrapper>
+                <MainPageDepartmentList/>
+                <MainPageLectureRanking/>
+            </MainBigPageWrapper>
         </>
     );
 }

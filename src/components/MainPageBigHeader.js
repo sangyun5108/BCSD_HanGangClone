@@ -1,39 +1,42 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const BigHeaderWrapper = styled.header`
-    height:80px;
-    width:100%;
-    display:flex;
-    justify-content:space-between;
+const BigHeaderHeaderWrapper = styled.header`
     border-bottom:1px solid lightgrey;
 `;
 
+const BigHeaderWrapper = styled.div`
+    height:80px;
+    width:1150px;;
+    display:flex;
+    justify-content:space-between;
+    margin:0 265px;
+`;
+
 const BigHeaderLeftContents = styled.nav`
-    width:1100px;
+    width:550px;
     height:80px;
     display:flex;
-    margin-left:120px;
 `;
 
 const BigHeaderRightContents = styled.nav`
     display:flex;
-    width:300px;
+    width:200px;
 `;
 
-const HanGangImgWrapper = styled.div`
+const BigHeaderLeftContentImageWrapper = styled.div`
     width:80px;
     height:100%;
     display:flex;
     justify-content:center;
     align-items:center;
-    margin-right:50px;
+    margin-right:40px;
 `;
 
 const HanGangImg = styled.img`
 `;
 
-const HomeButtonWrapper = styled(HanGangImgWrapper)`
+const HomeButtonWrapper = styled(BigHeaderLeftContentImageWrapper)`
     border-bottom:1px solid #238bfe
 `;
 
@@ -45,62 +48,60 @@ const HomeButton = styled.a`
     color:#238bfe;
 `;
 
-const LectureReviewWrapper = styled(HanGangImgWrapper)`
+const LectureReviewWrapper = styled(BigHeaderLeftContentImageWrapper)`
 `;
 const LectureReview = styled(HomeButton)`
 `;
-const LectureMaterialWrapper = styled(HanGangImgWrapper)`
+const LectureMaterialWrapper = styled(BigHeaderLeftContentImageWrapper)`
 `;
 const LectureMaterial = styled(HomeButton)`
 `;
-const TimeTableWrapper = styled(HanGangImgWrapper)`
+const TimeTableWrapper = styled(BigHeaderLeftContentImageWrapper)`
 `;
 const TimeTable = styled(HomeButton)`
 `;
-const LoginWrapper = styled(HanGangImgWrapper)`
+const LoginWrapper = styled(BigHeaderLeftContentImageWrapper)`
+    margin:0px 0px 0px 30px;
 `;
 const Login = styled(HomeButton)`
 `;
-const SignUpWrapper = styled(HanGangImgWrapper)`
+const SignUpWrapper = styled(BigHeaderLeftContentImageWrapper)`
+    margin:0px 0px 0px 30px;
 `;
 const SignUp = styled(HomeButton)`
 `;
-const NoMeaningWrapper = styled(HanGangImgWrapper)`
-    width:350px;
-    height:80px;
-`;
-
 const MainPageBigHeader = () => {
     return(
         <>
-            <BigHeaderWrapper>
-                <BigHeaderLeftContents>
-                    <HanGangImgWrapper>
-                        <HanGangImg src="https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/logo.svg"></HanGangImg>
-                    </HanGangImgWrapper>
-                    <HomeButtonWrapper>
-                        <HomeButton href='http://www.localhost:3000'>홈</HomeButton>
-                    </HomeButtonWrapper>
-                    <LectureReviewWrapper>
-                        <LectureReview href='http://www.localhost:3000'>강의평</LectureReview>
-                    </LectureReviewWrapper>
-                    <LectureMaterialWrapper>
-                        <LectureMaterial href='http://www.localhost:3000'>강의자료</LectureMaterial>
-                    </LectureMaterialWrapper>
-                    <TimeTableWrapper>
-                        <TimeTable href='http://www.localhost:3000'>시간표</TimeTable>
-                    </TimeTableWrapper>
-                    <NoMeaningWrapper></NoMeaningWrapper>
-                </BigHeaderLeftContents>
-                <BigHeaderRightContents>
-                    <LoginWrapper>
-                        <Login href='http://www.localhost:3000'>로그인</Login>
-                    </LoginWrapper>
-                    <SignUpWrapper>
-                            <SignUp href='http://www.localhost:3000'>회원가입</SignUp>
-                    </SignUpWrapper>
-                </BigHeaderRightContents>
-            </BigHeaderWrapper>
+            <BigHeaderHeaderWrapper>
+                <BigHeaderWrapper>
+                    <BigHeaderLeftContents>
+                        <BigHeaderLeftContentImageWrapper>
+                            <HanGangImg src="https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/logo.svg"></HanGangImg>
+                        </BigHeaderLeftContentImageWrapper>
+                        <HomeButtonWrapper>
+                            <HomeButton href='http://www.localhost:3000'>홈</HomeButton>
+                        </HomeButtonWrapper>
+                        <LectureReviewWrapper>
+                            <LectureReview href='http://www.localhost:3000'>강의평</LectureReview>
+                        </LectureReviewWrapper>
+                        <LectureMaterialWrapper>
+                            <LectureMaterial href='http://www.localhost:3000'>강의자료</LectureMaterial>
+                        </LectureMaterialWrapper>
+                        <TimeTableWrapper>
+                            <TimeTable href='http://www.localhost:3000'>시간표</TimeTable>
+                        </TimeTableWrapper>
+                    </BigHeaderLeftContents>
+                    <BigHeaderRightContents>
+                        <LoginWrapper>
+                            <Login href='http://www.localhost:3000'>로그인</Login>
+                        </LoginWrapper>
+                        <SignUpWrapper>
+                                <SignUp href='http://www.localhost:3000'>회원가입</SignUp>
+                        </SignUpWrapper>
+                    </BigHeaderRightContents>
+                </BigHeaderWrapper>
+            </BigHeaderHeaderWrapper>
         </>
     );
 }
