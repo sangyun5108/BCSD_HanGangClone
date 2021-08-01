@@ -2,6 +2,7 @@ import React from 'react';
 import MainPageBigHeader from './MainPageBigHeader';
 import MainPageLectureRanking from './MainPageLectureRanking';
 import styled from 'styled-components';
+import MainPageDepartmentList from './MainPageDepartmentList';
 
 const GoHangangImgAndContextWrapper = styled.div`
     width:1150px;
@@ -37,6 +38,7 @@ const MainBigPage = () => {
                 </GoHangangContext>
                 <GoHangangImg src='https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/represent.svg'></GoHangangImg>
             </GoHangangImgAndContextWrapper>
+            <MainPageDepartmentList/>
             <MainPageLectureRanking/>
         </>
     );

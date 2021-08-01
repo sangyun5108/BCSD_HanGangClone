@@ -9,7 +9,7 @@ const LectureRankingTitle = styled.div`
     font-weight:700;
     margin:0px 0px 10px 35px;
     @media(min-width:575px){
-     margin:0px 0px 10px 145px; 
+     margin:0px 0px 10px 135px; 
      font-weight:500; 
     }
 `;
@@ -23,7 +23,7 @@ const LectureRankingWrapper = styled.div`
     @media(min-width:575px){
         width:480px;
         height:392px;
-        margin-left:145px;
+        margin-left:135px;
     }
 `
 const LectureRankingListTitleWrapper = styled.div`
@@ -80,7 +80,7 @@ const LectureRankingListWrapper = styled.div`
     margin:0px 0 5px 0;
     border-top:1px solid lightgrey;
     display:flex;
-    @media(min-width:574px){
+    @media(min-width:575px){
         height:62px;
     }
 `;
@@ -140,17 +140,17 @@ const LectureRankingListProfessorWrapper = styled.div`
     }
 `;
 
-const LECTURE_RANKING_LIST = [
-    {title:'교양',id:0},
-    {title:'HRD',id:1},
-    {title:'기계',id:5},
-    {title:'메카',id:6},
-    {title:'산경',id:4},
-    {title:'에신화',id:3},
-    {title:'컴공',id:2},
-    {title:'융합',id:7},
-    {title:'전전통',id:8},
-    {title:'디ㆍ건',id:9}
+export const LECTURE_RANKING_LIST = [
+    {title:'교양',id:0,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/culture.png'},
+    {title:'HRD',id:1,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/hrd.png'},
+    {title:'기계',id:5,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/machine.png'},
+    {title:'메카',id:6,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/mecha.png'},
+    {title:'산경',id:4,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/industrial.png'},
+    {title:'에신화',id:3,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/energe.png'},
+    {title:'컴공',id:2,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/computer.png'},
+    {title:'융합',id:7,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/fusion.png'},
+    {title:'전전통',id:8,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/electrocity.png'},
+    {title:'디ㆍ건',id:9,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/design.png'}
 ]
 
 const MainPageLectureRanking = () => {
