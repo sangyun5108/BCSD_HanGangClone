@@ -2,8 +2,12 @@ import React from 'react';
 import MainPageLectureRanking from './MainPageLectureRanking';
 import styled from 'styled-components';
 import MainPageDepartmentList from './MainPageDepartmentList';
+import MainPageTimeTable from './MainPageTimeTable';
+import MainPageLectureMaterial from './MainPageLectureMaterial';
+import MainPageRecentLecture from './MainPageRecentLectures';
 
 const MainBigPageWrapper = styled.main`
+    height:1500px;
 `;
 
 const MainBigPageBannerWrapper = styled.section`
@@ -31,6 +35,22 @@ const MainBigPageBannerContextAnswer = styled.h1`
     font-weight:600;
 `;
 
+const MainBigPageSectionsWrapper = styled.section`
+    width:1200px;
+    margin:0 240px;
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+`;
+
+const MainBigPageSectionsRightSectionWrapper = styled.section`
+    height:690px;
+`;
+
+const MainBigPageSectionsRightSectionBottomWrapper = styled.section`
+    display:flex;
+`;
+
 const MainBigPage = () => {
     return(
         <>
@@ -43,7 +63,16 @@ const MainBigPage = () => {
                     <MainBigPageBannerImage src='https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/represent.svg'></MainBigPageBannerImage>
                 </MainBigPageBannerWrapper>
                 <MainPageDepartmentList/>
-                <MainPageLectureRanking/>
+                <MainBigPageSectionsWrapper>
+                    <MainPageLectureRanking/>
+                    <MainBigPageSectionsRightSectionWrapper>
+                        <MainPageLectureMaterial/>
+                        <MainBigPageSectionsRightSectionBottomWrapper>
+                            <MainPageTimeTable/>
+                            <MainPageRecentLecture/>
+                        </MainBigPageSectionsRightSectionBottomWrapper>
+                    </MainBigPageSectionsRightSectionWrapper>
+                </MainBigPageSectionsWrapper>
             </MainBigPageWrapper>
         </>
     );

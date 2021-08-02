@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
     margin:0px;
   }
   html{
-    height:100%;
+    height:1500px;
   }
   body{
     height:100%;

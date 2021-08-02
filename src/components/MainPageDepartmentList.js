@@ -23,7 +23,7 @@ const DepartmentListTitle = styled.label`
 `
 
 const DepartmentListsWrapper = styled.div`
-    width:500px;
+    width:510px;
     margin:0 auto;
     height:130px;
     overflow:scroll;

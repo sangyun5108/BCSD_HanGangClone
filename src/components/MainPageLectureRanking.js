@@ -5,8 +5,7 @@ import useGetLectures from '../customHooks/useGetLectures';
 const LectureRankingSectionWrapper = styled.section`
     margin-bottom:10px;
     @media(min-width:575px){
-        width:1160px;
-        margin:20px 265px 0px 265px;
+        width:480px;
     }
 `;
 
