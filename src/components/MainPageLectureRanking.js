@@ -3,28 +3,26 @@ import styled from 'styled-components';
 import useGetLectures from '../customHooks/useGetLectures';
 
 const LectureRankingSectionWrapper = styled.section`
+    width:500px;
+    margin:0 auto;
     margin-bottom:10px;
-    @media(min-width:575px){
-        width:480px;
-    }
 `;
 
-const LectureRankingTitle = styled.div`
+const LectureRankingTitle = styled.h1`
     width:75px;
     text-align:center;
     font-size:18px;
     font-weight:800;
-    margin:0px 0px 10px 35px;
+    margin-bottom:10px;
     @media(min-width:575px){
+     width:60px;
      margin: 0px 0px 5px 0px;
      font-weight:700; 
      font-size:16px;
-     padding-right:15px;
     }
 `;
 
 const LectureRankingWrapper = styled.div`
-    margin-left:35px;
     border:2px solid lightgrey;
     border-radius:15px;
     width:500px;

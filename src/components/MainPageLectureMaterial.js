@@ -3,15 +3,15 @@ import styled from 'styled-components';
 
 const MainPageLectureMaterialSectionWrapper = styled.section`
     width:500px;
-    margin: 20px 35px;
-
-    @media(min-width:575px){
-        margin: 0px 0px 20px 35px;
-        width:645px;
+    margin:0 auto;
+    margin-top:10px;
+    @media(min-width:574px){
+        margin:0px;
     }
 `;
 
-const MainPageLectureMaterialTitleWrapper = styled.div`
+const MainPageLectureMaterialTitleWrapper = styled.h1`
+    width:60px;
     font-size:16px;
     font-weight:600;
     margin-bottom:5px;

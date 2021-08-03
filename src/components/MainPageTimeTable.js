@@ -2,7 +2,13 @@ import React from 'react'
 import styled from 'styled-components';
 
 const TimeTableSectionWrapper = styled.section`
-    margin:0 35px;
+    width:500px;
+    margin: 0 auto;
+    margin-top:10px;
+
+    @media(min-width:574px){
+        margin-top:10px;
+    }
 `;
 const TimeTableTitleWrapper = styled.div`
     font-size:16px;
@@ -40,9 +46,7 @@ const TimeTableContextButton = styled.button`
     margin-top:5px;
     border-radius:15px;
     border:none;
-    &:hover{
-        cursor:pointer;
-    }
+    cursor:pointer;
 `;
 
 

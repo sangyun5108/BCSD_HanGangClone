@@ -7,7 +7,6 @@ import MainPageLectureMaterial from './MainPageLectureMaterial';
 import MainPageRecentLecture from './MainPageRecentLectures';
 
 const MainBigPageWrapper = styled.main`
-    height:1500px;
 `;
 
 const MainBigPageBannerWrapper = styled.section`
@@ -17,7 +16,7 @@ const MainBigPageBannerWrapper = styled.section`
     padding-top:35px;
     justify-content:space-between;
     align-items:flex-end;
-    margin: 0px 265px 0px 265px;
+    margin: 0px auto;
 `;
 const MainBigPageBannerImage = styled.img`
 `;
@@ -36,15 +35,17 @@ const MainBigPageBannerContextAnswer = styled.h1`
 `;
 
 const MainBigPageSectionsWrapper = styled.section`
-    width:1200px;
-    margin:0 240px;
-    margin-top:20px;
+    width:1150px;
+    margin:0 auto;
     display:flex;
     justify-content:center;
 `;
 
 const MainBigPageSectionsRightSectionWrapper = styled.section`
+    width:650px;
     height:690px;
+    display:flex;
+    flex-direction:column;
 `;
 
 const MainBigPageSectionsRightSectionBottomWrapper = styled.section`

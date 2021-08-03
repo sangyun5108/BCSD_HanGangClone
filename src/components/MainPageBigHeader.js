@@ -10,7 +10,7 @@ const BigHeaderWrapper = styled.div`
     width:1150px;;
     display:flex;
     justify-content:space-between;
-    margin:0 265px;
+    margin:0 auto;
 `;
 
 const BigHeaderLeftContents = styled.nav`
@@ -33,7 +33,7 @@ const BigHeaderLeftContentImageWrapper = styled.div`
     margin-right:40px;
 `;
 
-const HanGangImg = styled.img`
+const BigHeaderLeftContentImage = styled.img`
 `;
 
 const HomeButtonWrapper = styled(BigHeaderLeftContentImageWrapper)`
@@ -77,7 +77,7 @@ const MainPageBigHeader = () => {
                 <BigHeaderWrapper>
                     <BigHeaderLeftContents>
                         <BigHeaderLeftContentImageWrapper>
-                            <HanGangImg src="https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/logo.svg"></HanGangImg>
+                            <BigHeaderLeftContentImage src="https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/logo.svg"></BigHeaderLeftContentImage>
                         </BigHeaderLeftContentImageWrapper>
                         <HomeButtonWrapper>
                             <HomeButton href='http://www.localhost:3000'>홈</HomeButton>

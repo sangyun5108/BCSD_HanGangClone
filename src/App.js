@@ -7,10 +7,9 @@ const GlobalStyle = createGlobalStyle`
     margin:0px;
   }
   html{
-    height:1500px;
+    width:100%;
   }
   body{
-    height:100%;
   }
 `;
 

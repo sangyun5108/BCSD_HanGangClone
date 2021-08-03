@@ -3,12 +3,10 @@ import styled from 'styled-components';
 
 const MainPageRecentLectureSectionWrapper = styled.section`
     width:500px;
-    height:224px;
-    margin:0 35px;
+    margin: 0 auto;
+    margin-top:10px;
     @media(min-width:575px){
-        width:250px;
-        margin: 0px 0px 0px 0px;
-        height:320px;
+        margin: 10px 0px 0px 30px;
     }
 `;
 
@@ -22,7 +20,6 @@ const MainPageRecentLectureWrapper = styled.div`
     border-radius:15px;
     width:500px;
     height:200px;
-    margin:0px 35;
     display:flex;
     justify-content:center;
     align-items:center;

@@ -3,35 +3,35 @@ import styled from 'styled-components';
 import { LECTURE_RANKING_LIST } from './MainPageLectureRanking';
 
 const DepartmentSectionWrapper = styled.section`
-    width:574px;
     @media(min-width:575px){
-        width:1200px;
-        margin:0 240px;
+        width:1150px;
+        margin:0 auto;
     }
 `;
 
-const DepartmentListTitle = styled.label`
+const DepartmentListTitle = styled.h1`
     width:80px;
+    font-size:16px;
     margin:15px 0px 10px 35px;
     font-weight:700;
 
     @media(min-width:575px){
-        margin:0px 0px 0px 25px;
-        position:absolute;
-        
+        margin:0px;     
     }
 `
 
 const DepartmentListsWrapper = styled.div`
-    width:510px;
+    width:574px;
+    padding-left:30px;
     margin:0 auto;
     height:130px;
     overflow:scroll;
 
     @media(min-width:575px){
-        margin-left:8px;
-        width:1200px;
+        width:1150px;
         height:120px;
+        margin-top:10px;
+        padding-left:0px;
     }
 `;
 
@@ -47,19 +47,17 @@ const DepartmentList = styled.li`
 const DepartmentListWrapper = styled.div`
     width:100px;
     height:90px;
-    margin:5px 5px 5px 5px;
+    margin:5px;
     border-radius:10px;
     background-image:url(${props=>props.active&&props.active});
     background-size:cover;
     display:flex;
     justify-content:center;
     align-items:flex-end;
-    &:hover{
-        cursor:pointer;
-    }
+    cursor:pointer;
     @media(min-width:575px){
         width:100px;
-        margin: 25px 0px 0px 17px;
+        margin: 0px 16.5px 0px 0px;
     }
 `;
 
