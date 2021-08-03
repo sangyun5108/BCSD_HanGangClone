@@ -29,7 +29,7 @@ const LectureRankingWrapper = styled.div`
     border:2px solid lightgrey;
     border-radius:15px;
     width:500px;
-    height:500px;
+    height:490px;
     @media(min-width:575px){
         width:480px;
         height:392px;
@@ -38,18 +38,19 @@ const LectureRankingWrapper = styled.div`
 `
 const LectureRankingListTitleWrapper = styled.div`
     overflow:scroll;
-    height:70px;
+    height:61px;
     font-weight:700;
+    border-bottom:1px solid lightgrey;
     @media(min-width:575px){
-        height:50px;
-        margin-left:12px;
+        height:51px;
+        display:flex;
+        justify-content:center;
     }
 `
 
 const LectureRankingListTitleUlWrapper = styled.ul`
     border-radius:12px 12px 0px 0px;
     width:700px;
-    height:50px;
     display:flex;
     padding-left:0px;
     @media(min-width:575px){
@@ -58,26 +59,27 @@ const LectureRankingListTitleUlWrapper = styled.ul`
 `;
 
 const LectureRankingListTitle = styled.li`
-    width:100px;
     list-style:none;
     text-align:center;
-    padding-top:25px;
-    border-bottom:1px solid ligthgrey;
+    height:60px;
+    border-bottom:${props=>props.active?'2px solid rgb(255, 171, 46);':';'}
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:${props=>props.active?'#238bfe;':'rgb(153, 153, 153);'}
     @media(min-width:575px){
-        padding-top:16px;
         width:47px;
+        height:50px;
     }
 `;
 
 const LectureRankingListTitleContext = styled.div`
-    &:hover{
-        cursor:pointer;
-    }
-    font-size:20px;
+    cursor:pointer;
+    font-size:16px;
     width:80px;
     @media(min-width:575px){
         width:40px;
-        font-size:13px;   
+        font-size:13px;
     }
 `;
 
@@ -87,7 +89,7 @@ const LectureRankingListUlWrapper = styled.ul`
 
 const LectureRankingListWrapper = styled.div`
     height:80px;
-    margin:0px 0 5px 0;
+    margin-bottom:5px;
     border-top:1px solid lightgrey;
     display:flex;
     @media(min-width:575px){
@@ -119,6 +121,7 @@ const LectureRankingListContentWrapper = styled.div`
     flex-direction:column;
     justify-content:center;
     padding-top:10px;
+
 `;
 const LectureRankingListRatingWrapper = styled.div`
     width:30px;
@@ -166,11 +169,14 @@ export const LECTURE_RANKING_LIST = [
 const MainPageLectureRanking = () => {
 
     const lectureRankingDataList = useGetLectures();
+    const [selectedTitle,setSelectedTitle]=useState();
     const [selectedLectureList,setselectedLectureList] = useState([]);
     const onClickTitle = (e) => {
+
         const selectedLists = lectureRankingDataList[e.target.id].result
         .map((list)=>{
             return {
+                title:e.target.innerText,
                 name:list.name,
                 professor:list.professor,
                 rating:list.total_rating,
@@ -178,10 +184,12 @@ const MainPageLectureRanking = () => {
             }
         })
         setselectedLectureList(selectedLists);
+        setSelectedTitle(e.target.innerText);
     }
 
     return(
-        <> 
+        <>
+            {console.log('rendering')} 
             <LectureRankingSectionWrapper>
                 <LectureRankingTitle>강의랭킹</LectureRankingTitle>
                 <LectureRankingWrapper>
@@ -189,7 +197,7 @@ const MainPageLectureRanking = () => {
                         <LectureRankingListTitleUlWrapper>
                             {LECTURE_RANKING_LIST.map((list)=>{
                                 return(
-                                    <LectureRankingListTitle key={list.id}>
+                                    <LectureRankingListTitle key={list.id} active={selectedTitle===list.title}>
                                         <LectureRankingListTitleContext onClick={(e)=>onClickTitle(e)} id={list.id}>{list.title}</LectureRankingListTitleContext>
                                     </LectureRankingListTitle>
                                 );

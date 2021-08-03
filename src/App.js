@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     margin:0px;
     font-family: 'Noto Sans KR', sans-serif;
+    scrollbar-width:thin;
   }
   html{
     width:100%;
