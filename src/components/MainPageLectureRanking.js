@@ -18,7 +18,7 @@ const LectureRankingTitle = styled.h1`
     font-weight:800;
     margin-bottom:10px;
     @media(min-width:575px){
-     width:60px;
+     width:75px;
      margin: 0px 0px 5px 0px;
      font-weight:700; 
      font-size:16px;

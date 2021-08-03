@@ -21,8 +21,8 @@ const MainBigPageBannerWrapper = styled.section`
 const MainBigPageBannerImage = styled.img`
 `;
 const MainBigPageBannerContext = styled.div`
-    height:75px;
-    margin-bottom:10px;
+    height:85px;
+    margin-bottom:20px;
 `;
 
 const MainBigPageBannerContextQuestion = styled.h1`
