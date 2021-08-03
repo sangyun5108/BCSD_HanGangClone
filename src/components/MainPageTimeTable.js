@@ -36,7 +36,6 @@ const TimeTableContextWrapper = styled.div`
     display:flex;
     flex-direction:column;
     align-items:center;
-    width:200px;
     color:grey;
 `;
 const TimeTableMainContext = styled.div`

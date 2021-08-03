@@ -33,7 +33,6 @@ const MainPageLectureMaterialWrapper = styled.div`
 `;
 
 const MainPageLectureMaterialContextWrapper = styled.div`
-    width:380px;
     color:grey;
 `;
 
