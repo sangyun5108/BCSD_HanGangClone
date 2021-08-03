@@ -5,7 +5,8 @@ const MainPageLectureMaterialSectionWrapper = styled.section`
     width:500px;
     margin:0 auto;
     margin-top:10px;
-    @media(min-width:574px){
+    @media(min-width:575px){
+        width:650px;
         margin:0px;
     }
 `;
@@ -27,7 +28,7 @@ const MainPageLectureMaterialWrapper = styled.div`
     align-items:center;
 
     @media(min-width:575px){
-        width:645px;
+        width:650px;
     }
 `;
 

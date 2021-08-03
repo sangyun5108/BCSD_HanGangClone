@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 const MainPageRecentLectureSectionWrapper = styled.section`
     width:500px;
-    margin: 0 auto;
-    margin-top:10px;
+    margin:10px auto;
     @media(min-width:575px){
-        margin: 10px 0px 0px 30px;
+        margin: 10px 0px 0px 35px;
+        width:254px;
     }
 `;
 

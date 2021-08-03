@@ -6,11 +6,12 @@ const TimeTableSectionWrapper = styled.section`
     margin: 0 auto;
     margin-top:10px;
 
-    @media(min-width:574px){
-        margin-top:10px;
+    @media(min-width:575px){
+        width:370px;
     }
 `;
-const TimeTableTitleWrapper = styled.div`
+const TimeTableTitleWrapper = styled.h1`
+    width:60px;
     font-size:16px;
     font-weight:700;
     margin-bottom:10px;

@@ -28,8 +28,8 @@ const DepartmentListsWrapper = styled.div`
     overflow:scroll;
 
     @media(min-width:575px){
-        width:1150px;
-        height:120px;
+        width:1166.5px;
+        height:100px;
         margin-top:10px;
         padding-left:0px;
     }
@@ -57,7 +57,7 @@ const DepartmentListWrapper = styled.div`
     cursor:pointer;
     @media(min-width:575px){
         width:100px;
-        margin: 0px 16.5px 0px 0px;
+        margin:0px 16.5px 0px 0px;
     }
 `;
 
@@ -75,8 +75,8 @@ const MainPageDepartmentList = () => {
                             {LECTURE_RANKING_LIST.map((list)=>{
                                 return(
                                     <DepartmentList key={list.id+100} onClick={()=>alert(`${list.title}학부입니다`)}>
-                                        <DepartmentListWrapper active={list.img}>
-                                            <DepartmentListContext>{list.title}</DepartmentListContext>
+                                        <DepartmentListWrapper active={list.img} title={list.title}>
+                                            <DepartmentListContext className={list.title}>{list.title}</DepartmentListContext>
                                         </DepartmentListWrapper>
                                     </DepartmentList>
                                 )

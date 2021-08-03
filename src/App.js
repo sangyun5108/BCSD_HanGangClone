@@ -11,6 +11,9 @@ const GlobalStyle = createGlobalStyle`
   }
   body{
   }
+  #root{
+    min-width:574px;
+  }
 `;
 
 function App() {

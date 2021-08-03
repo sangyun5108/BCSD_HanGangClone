@@ -4,8 +4,11 @@ import useGetLectures from '../customHooks/useGetLectures';
 
 const LectureRankingSectionWrapper = styled.section`
     width:500px;
+    height:530px;
     margin:0 auto;
-    margin-bottom:10px;
+
+    @media(min-width:575px){
+        height:420px;
 `;
 
 const LectureRankingTitle = styled.h1`

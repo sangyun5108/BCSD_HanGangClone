@@ -36,9 +36,13 @@ const MainBigPageBannerContextAnswer = styled.h1`
 
 const MainBigPageSectionsWrapper = styled.section`
     width:1150px;
-    margin:0 auto;
+    margin:0px auto;
     display:flex;
     justify-content:center;
+
+    @media(min-width:575px){
+        margin-top:10px;
+    }
 `;
 
 const MainBigPageSectionsRightSectionWrapper = styled.section`
