@@ -15,6 +15,10 @@ const GlobalStyle = createGlobalStyle`
   }
   #root{
     min-width:574px;
+    height:1850px;
+    @media(min-width:575px){
+      height:1500px;
+    }
   }
 `;
 

@@ -27,7 +27,7 @@ const MainPageSmallHeader = () => {
         <>
             <SmallHeaderWrapper>
                 <HanGangImageWrapper>
-                    <HanGangImage src="https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/logo.svg"></HanGangImage>
+                    <HanGangImage src="https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/logo.svg"/>
                 </HanGangImageWrapper>
             </SmallHeaderWrapper>
         </>

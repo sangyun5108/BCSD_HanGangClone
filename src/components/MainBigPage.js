@@ -66,7 +66,7 @@ const MainBigPage = () => {
                         <MainBigPageBannerContextQuestion>솔직한 강의평을 원한다면?</MainBigPageBannerContextQuestion>
                         <MainBigPageBannerContextAnswer>가자, 한강으로!</MainBigPageBannerContextAnswer>
                     </MainBigPageBannerContext>
-                    <MainBigPageBannerImage src='https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/represent.svg'></MainBigPageBannerImage>
+                    <MainBigPageBannerImage src='https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/represent.svg'/>
                 </MainBigPageBannerWrapper>
                 <MainPageDepartmentList/>
                 <MainBigPageSectionsWrapper>

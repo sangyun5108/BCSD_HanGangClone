@@ -76,7 +76,7 @@ const MainPageBigHeader = () => {
                 <BigHeaderWrapper>
                     <BigHeaderLeftContents>
                         <BigHeaderLeftContentImageWrapper>
-                            <BigHeaderLeftContentImage src="https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/logo.svg"></BigHeaderLeftContentImage>
+                            <BigHeaderLeftContentImage src="https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/logo.svg"/>
                         </BigHeaderLeftContentImageWrapper>
                         <HomeButtonWrapper>
                             <HomeButton href='http://www.localhost:3000'>홈</HomeButton>

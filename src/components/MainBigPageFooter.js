@@ -116,7 +116,7 @@ const MainBigPageFooter = () => {
             <MainBigPageFooterWrapper>
                 <MainBigPageFooterInnerWrapper>
                     <MainBigPageFooterInnerLeftImageWrapper>
-                        <MainBigPageFooterInnerLeftImage src='https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/footer_hangang_logo.png'></MainBigPageFooterInnerLeftImage>
+                        <MainBigPageFooterInnerLeftImage src='https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/footer_hangang_logo.png'/>
                     </MainBigPageFooterInnerLeftImageWrapper>
                     <MainBigPageFooterInnerMiddle>
                         <MainBigPageFooterInnerMiddleFirstContents>
@@ -141,10 +141,10 @@ const MainBigPageFooter = () => {
                     <MainBigPageFooterInnerRightImages>
                         <MainBigPageFooterInnerRightImagesWrppaer>
                             <LinkToFaceBook href='https://www.facebook.com/BCSD-Lab-1727922507422214/' target='_blank'>
-                                <MainBigPageFooterInnerRightFacebookImage src='https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/facebook_icon.png' alt='페이스북 아이콘'></MainBigPageFooterInnerRightFacebookImage>
+                                <MainBigPageFooterInnerRightFacebookImage src='https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/facebook_icon.png' alt='페이스북 아이콘'/>
                             </LinkToFaceBook>
                             <LinkToHome href='/'>
-                                <MainBigPageFooterInnerRightHomeImage src='https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/home_icon.png' alt='홈 아이콘'></MainBigPageFooterInnerRightHomeImage>
+                                <MainBigPageFooterInnerRightHomeImage src='https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/home_icon.png' alt='홈 아이콘'/>
                             </LinkToHome>
                         </MainBigPageFooterInnerRightImagesWrppaer>
                     </MainBigPageFooterInnerRightImages>

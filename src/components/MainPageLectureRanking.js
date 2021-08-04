@@ -62,11 +62,11 @@ const LectureRankingListTitle = styled.li`
     list-style:none;
     text-align:center;
     height:60px;
-    border-bottom:${props=>props.active?'2px solid rgb(255, 171, 46);':';'}
+    border-bottom:${props=>props.active?'2px solid rgb(255, 171, 46)':''};
     display:flex;
     justify-content:center;
     align-items:center;
-    color:${props=>props.active?'#238bfe;':'rgb(153, 153, 153);'}
+    color:${props=>props.active?'#238bfe':'rgb(153, 153, 153)'};
     @media(min-width:575px){
         width:47px;
         height:50px;
@@ -189,7 +189,6 @@ const MainPageLectureRanking = () => {
 
     return(
         <>
-            {console.log('rendering')} 
             <LectureRankingSectionWrapper>
                 <LectureRankingTitle>강의랭킹</LectureRankingTitle>
                 <LectureRankingWrapper>
