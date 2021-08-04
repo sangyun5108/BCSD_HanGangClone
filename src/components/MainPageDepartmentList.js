@@ -22,8 +22,8 @@ const DepartmentListTitle = styled.h1`
 
 const DepartmentListsWrapper = styled.div`
     width:574px;
-    padding-left:30px;
     margin:0 auto;
+    padding-left:30px;
     height:130px;
     overflow:scroll;
 
@@ -63,6 +63,8 @@ const DepartmentListWrapper = styled.div`
 
 const DepartmentListContext = styled.div`
     color:white;
+    font-size:14px;
+    margin-bottom:5px;
 `;
 
 const MainPageDepartmentList = () => {

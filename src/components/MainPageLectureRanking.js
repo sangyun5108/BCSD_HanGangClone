@@ -38,7 +38,7 @@ const LectureRankingWrapper = styled.div`
 `
 const LectureRankingListTitleWrapper = styled.div`
     overflow:scroll;
-    height:61px;
+    height:62px;
     font-weight:700;
     border-bottom:1px solid rgb(238, 238, 238);
     @media(min-width:575px){
@@ -68,7 +68,7 @@ const LectureRankingListTitle = styled.li`
     align-items:center;
     color:${props=>props.active?'#238bfe':'rgb(153, 153, 153)'};
     @media(min-width:575px){
-        width:47px;
+        width:45px;
         height:50px;
     }
 `;
