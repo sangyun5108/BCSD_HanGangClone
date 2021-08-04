@@ -5,6 +5,7 @@ import MainPageDepartmentList from './MainPageDepartmentList';
 import MainPageTimeTable from './MainPageTimeTable';
 import MainPageLectureMaterial from './MainPageLectureMaterial';
 import MainPageRecentLecture from './MainPageRecentLectures';
+import MainBigPageFooter from './MainBigPageFooter';
 
 const MainBigPageWrapper = styled.main`
 `;
@@ -78,6 +79,7 @@ const MainBigPage = () => {
                         </MainBigPageSectionsRightSectionBottomWrapper>
                     </MainBigPageSectionsRightSectionWrapper>
                 </MainBigPageSectionsWrapper>
+                <MainBigPageFooter/>
             </MainBigPageWrapper>
         </>
     );

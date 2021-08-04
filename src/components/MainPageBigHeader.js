@@ -25,12 +25,11 @@ const BigHeaderRightContents = styled.nav`
 `;
 
 const BigHeaderLeftContentImageWrapper = styled.div`
-    width:80px;
+    width:120px;
     height:100%;
     display:flex;
     justify-content:center;
     align-items:center;
-    margin-right:40px;
 `;
 
 const BigHeaderLeftContentImage = styled.img`
@@ -61,12 +60,12 @@ const TimeTableWrapper = styled(BigHeaderLeftContentImageWrapper)`
 const TimeTable = styled(HomeButton)`
 `;
 const LoginWrapper = styled(BigHeaderLeftContentImageWrapper)`
-    margin:0px 0px 0px 30px;
+    width:100px;
 `;
 const Login = styled(HomeButton)`
 `;
 const SignUpWrapper = styled(BigHeaderLeftContentImageWrapper)`
-    margin:0px 0px 0px 30px;
+    width:100px;
 `;
 const SignUp = styled(HomeButton)`
 `;
