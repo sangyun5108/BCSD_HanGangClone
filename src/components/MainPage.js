@@ -6,7 +6,7 @@ import MainPageSmallHeader from './MainPageSmallHeader';
 
 const MainPage = () => {
 
-    let [isMobile,setIsMobile] = useState(false);
+    let [isMobile,setIsMobile] = useState(window.matchMedia('(max-width:574px)').matches);
 
     useEffect(()=>{
         console.log('useEffect');
