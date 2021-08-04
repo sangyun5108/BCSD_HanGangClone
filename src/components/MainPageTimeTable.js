@@ -22,7 +22,7 @@ const TimeTableTitleWrapper = styled.h1`
 const TimeTableWrapper = styled.div`
     width:500px;
     height:300px;
-    border:2px solid lightgrey;
+    border:2px solid rgb(238, 238, 238);
     border-radius:15px;
     display:flex;
     justify-content:center;

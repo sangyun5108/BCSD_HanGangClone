@@ -19,7 +19,7 @@ const MainSmallPageFooterContent = styled.div`
     align-items:center;
     justify-content:center;
     border-top:${props=>props.active?'2px solid #238bfe':''};
-    color:${props=>props.active?"#238bfe":"grey"};
+    color:${props=>props.active?"#238bfe":"rgb(153, 153, 153)"};
 `;
 
 const MainSmallPageFooterContentWrapper = styled.div`

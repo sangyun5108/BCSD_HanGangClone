@@ -26,7 +26,7 @@ const LectureRankingTitle = styled.h1`
 `;
 
 const LectureRankingWrapper = styled.div`
-    border:2px solid lightgrey;
+    border:2px solid rgb(238, 238, 238);
     border-radius:15px;
     width:500px;
     height:490px;
@@ -40,7 +40,7 @@ const LectureRankingListTitleWrapper = styled.div`
     overflow:scroll;
     height:61px;
     font-weight:700;
-    border-bottom:1px solid lightgrey;
+    border-bottom:1px solid rgb(238, 238, 238);
     @media(min-width:575px){
         height:51px;
         display:flex;
@@ -146,7 +146,7 @@ const LectureRankingListNameWrapper = styled.div`
 const LectureRankingListProfessorWrapper = styled.div`
     width:180px;
     font-size:15px;
-    color:lightgrey;
+    color:rgb(153, 153, 153);
     @media(min-width:575px){
         color:black;
         font-size:13px;

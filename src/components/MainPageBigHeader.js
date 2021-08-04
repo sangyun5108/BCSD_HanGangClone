@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const BigHeaderHeaderWrapper = styled.header`
-    border-bottom:1px solid lightgrey;
+    border-bottom:1px solid rgb(238, 238, 238);
 `;
 
 const BigHeaderWrapper = styled.div`
