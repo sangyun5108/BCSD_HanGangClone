@@ -57,11 +57,17 @@ const TimeTableListLeftContents = styled.div`
 
 const TimeTableListLeftContentTitle = styled.div`
     font-weight:700;
+    @media(min-width:575px){
+        font-size:14px;
+    }
 `;
 
 const TimeTableListLeftContentProfessor = styled.div`
     font-size:14px;
     color:#999999;
+    @media(min-width:575px){
+        font-size:12px;
+    }
 `;
 
 const TimeTableListRightContents = styled.div`
@@ -72,12 +78,17 @@ const TimeTableListRightContents = styled.div`
 `;
 
 const TimeTableListRightButton = styled.button`
+    width:75px;
     height:25px;
     border:none;
     border-radius:15px;
     background-color:${props=>props.active?'':'#238bfe'};
     color:${props=>props.active?'':'#ffffff'};
     cursor:pointer;
+    @media(min-width:575px){
+        width:60px;
+        font-size:12px;
+    }
 `;
 
 const TIMETABLE_LIST = [

@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import MainPage from "./components/MainPage";
 import {createGlobalStyle} from 'styled-components';
+import { LECENT_LECTURES } from "./components/MainPageRecentLectures";
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -13,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
   }
   #root{
     min-width:574px;
-    height:1850px;
+    height:2050px;
     @media(min-width:575px){
       height:1500px;
     }
@@ -21,6 +23,9 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function App() {
+  useEffect(()=>{
+    localStorage.setItem('최근 본 강의',JSON.stringify(LECENT_LECTURES));
+  },[]);
   return (
     <>
       <GlobalStyle/>

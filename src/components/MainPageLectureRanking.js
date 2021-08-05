@@ -42,7 +42,7 @@ const LectureRankingListTitleWrapper = styled.div`
     font-weight:700;
     border-bottom:1px solid rgb(238, 238, 238);
     @media(min-width:575px){
-        height:51px;
+        height:52px;
         display:flex;
         justify-content:center;
     }

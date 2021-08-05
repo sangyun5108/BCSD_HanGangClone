@@ -88,7 +88,6 @@ const MainPageBigHeader = () => {
     const [isSelected,setIsSelected] = useState('홈');
     
     const onClickTitle = (e) => {
-        console.log(e.target.innerText);
         setIsSelected(e.target.innerText);
     }
 
