@@ -154,26 +154,25 @@ const LectureRankingListProfessorWrapper = styled.div`
 `;
 
 export const LECTURE_RANKING_LIST = [
-    {title:'교양',id:0,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/culture.png'},
-    {title:'HRD',id:1,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/hrd.png'},
-    {title:'기계',id:5,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/machine.png'},
-    {title:'메카',id:6,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/mecha.png'},
-    {title:'산경',id:4,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/industrial.png'},
-    {title:'에신화',id:3,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/energe.png'},
+    {title:'교양',id:10,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/culture.png'},
+    {title:'HRD',id:9,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/hrd.png'},
+    {title:'기계',id:1,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/machine.png'},
+    {title:'메카',id:3,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/mecha.png'},
+    {title:'산경',id:7,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/industrial.png'},
+    {title:'에신화',id:6,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/energe.png'},
     {title:'컴공',id:2,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/computer.png'},
-    {title:'융합',id:7,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/fusion.png'},
-    {title:'전전통',id:8,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/electrocity.png'},
-    {title:'디ㆍ건',id:9,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/design.png'}
+    {title:'융합',id:8,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/fusion.png'},
+    {title:'전전통',id:4,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/electrocity.png'},
+    {title:'디ㆍ건',id:5,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/design.png'}
 ]
 
 const MainPageLectureRanking = () => {
+    const dataLists= useGetLectures();
+    const [selectedTitle,setSelectedTitle]=useState('');
+    const [selectedLectureList,setSelectedLectureList] = useState([]);
 
-    const lectureRankingDataList = useGetLectures();
-    const [selectedTitle,setSelectedTitle]=useState();
-    const [selectedLectureList,setselectedLectureList] = useState([]);
     const onClickTitle = (e) => {
-
-        const selectedLists = lectureRankingDataList[e.target.id].result
+        const selectedLists = dataLists[e.target.id].data.result
         .map((list)=>{
             return {
                 title:e.target.innerText,
@@ -183,7 +182,7 @@ const MainPageLectureRanking = () => {
                 id:list.id
             }
         })
-        setselectedLectureList(selectedLists);
+        setSelectedLectureList(selectedLists);
         setSelectedTitle(e.target.innerText);
     }
 
@@ -194,10 +193,10 @@ const MainPageLectureRanking = () => {
                 <LectureRankingWrapper>
                     <LectureRankingListTitleWrapper>
                         <LectureRankingListTitleUlWrapper>
-                            {LECTURE_RANKING_LIST.map((list)=>{
+                            {LECTURE_RANKING_LIST.map((list,index)=>{
                                 return(
                                     <LectureRankingListTitle key={list.id} active={selectedTitle===list.title}>
-                                        <LectureRankingListTitleContext onClick={(e)=>onClickTitle(e)} id={list.id}>{list.title}</LectureRankingListTitleContext>
+                                        <LectureRankingListTitleContext onClick={(e)=>onClickTitle(e)} id={index}>{list.title}</LectureRankingListTitleContext>
                                     </LectureRankingListTitle>
                                 );
                             })}
