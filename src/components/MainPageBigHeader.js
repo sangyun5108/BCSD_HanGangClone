@@ -15,7 +15,7 @@ const BigHeaderWrapper = styled.nav`
 
 const BigHeaderLeftContents = styled.div`
     display:flex;
-    height:82px;
+    height:80px;
     justify-content:center;
     align-items:center;
     position:relative;
@@ -31,6 +31,7 @@ const BigHeaderLeftContentsUl = styled.ul`
 const BigHeaderLeftContentLi = styled.li`
     height:80px;
     list-style:none;
+    border-bottom:${props=>props.active?'2px solid rgb(35, 139, 254)':''};
 `;
 
 const BigHeaderRightContents = styled.div`
@@ -41,7 +42,7 @@ const BigHeaderRightContents = styled.div`
     color:rgb(35, 139, 254);
 `;
 
-const BigHeaderLeftContentImageWrapper = styled.div`
+const BigHeaderLeftContentImageWrapper = styled.a`
     width:120px;
     height:100%;
     display:flex;
@@ -59,7 +60,6 @@ const BigHeaderLeftContent = styled.div`
     justify-content:center;
     align-items:center;
     color:rgb(35, 139, 254);
-    border-bottom:${props=>props.active?'2px solid rgb(35, 139, 254)':''};
 `;
 
 const BigHeaderLeftContentText = styled.div`
@@ -98,14 +98,14 @@ const MainPageBigHeader = () => {
             <BigHeaderHeaderWrapper>
                 <BigHeaderWrapper>
                     <BigHeaderLeftContents>
-                        <BigHeaderLeftContentImageWrapper>
+                        <BigHeaderLeftContentImageWrapper href="http://localhost:3000/">
                             <BigHeaderLeftContentImage src='https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/logo.svg'/>
                         </BigHeaderLeftContentImageWrapper>
                         <BigHeaderLeftContentsUl>
                         {LEFT_CONTENTS.map((list)=>{
                             return(
-                                <BigHeaderLeftContentLi key={list.id}>
-                                    <BigHeaderLeftContent active={isSelected===list.name}>
+                                <BigHeaderLeftContentLi key={list.id} active={isSelected===list.name}>
+                                    <BigHeaderLeftContent>
                                         <BigHeaderLeftContentText onClick={(e)=>onClickTitle(e)}>{list.name}</BigHeaderLeftContentText>
                                     </BigHeaderLeftContent>
                                 </BigHeaderLeftContentLi>
