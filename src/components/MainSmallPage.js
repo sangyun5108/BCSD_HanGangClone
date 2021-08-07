@@ -20,9 +20,9 @@ const MainSmallPage = () => {
             <MainpageTimeTable/>
             <MainPageLectureMaterial/>
             <MainPageRecentLecture/>
-            <MainSmallPageFooterWrapper>
+            {/* <MainSmallPageFooterWrapper>
                 <MainSmallPageFooter/>
-            </MainSmallPageFooterWrapper>
+            </MainSmallPageFooterWrapper> */}
         </>
     )
 }

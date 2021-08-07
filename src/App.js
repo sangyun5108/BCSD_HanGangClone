@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import MainPage from "./components/MainPage";
+import MainPage from "./pages/MainPage";
 import {createGlobalStyle} from 'styled-components';
 import { LECENT_LECTURES } from "./components/MainPageRecentLectures";
 
