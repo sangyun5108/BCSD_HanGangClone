@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import styled from 'styled-components';
-import useGetLectures from '../customHooks/useGetLectures';
+import useGetLectures from '../Hooks/useGetLectures';
 
 const LectureRankingSectionWrapper = styled.section`
     width:500px;
@@ -32,17 +32,17 @@ const LectureRankingWrapper = styled.div`
     height:490px;
     @media(min-width:575px){
         width:480px;
-        height:392px;
+        height:385px;
         margin-left:0px;
     }
 `
 const LectureRankingListTitleWrapper = styled.div`
     overflow:scroll;
-    height:62px;
+    height:63px;
     font-weight:700;
-    border-bottom:1px solid rgb(238, 238, 238);
     @media(min-width:575px){
-        height:52px;
+        width:480px;
+        height:50px;
         display:flex;
         justify-content:center;
     }
@@ -50,25 +50,28 @@ const LectureRankingListTitleWrapper = styled.div`
 
 const LectureRankingListTitleUlWrapper = styled.ul`
     border-radius:12px 12px 0px 0px;
-    width:700px;
+    width:821px;
+    height:63px;
     display:flex;
     padding-left:0px;
     @media(min-width:575px){
-        width:450px;
+        width:480px;
+        height:50px;
     }
 `;
 
 const LectureRankingListTitle = styled.li`
     list-style:none;
     text-align:center;
-    height:60px;
-    border-bottom:${props=>props.active?'2px solid rgb(255, 171, 46)':''};
+    width:83px;
+    height:62px;
+    border-bottom:${props=>props.active?'2px solid rgb(255, 171, 46)':'2px solid rgb(238, 238, 238)'};
     display:flex;
     justify-content:center;
     align-items:center;
     color:${props=>props.active?'#238bfe':'rgb(153, 153, 153)'};
     @media(min-width:575px){
-        width:45px;
+        width:47.5px;
         height:50px;
     }
 `;
@@ -88,12 +91,11 @@ const LectureRankingListUlWrapper = styled.ul`
 `;
 
 const LectureRankingListWrapper = styled.div`
-    height:80px;
-    margin-bottom:5px;
-    border-top:1px solid lightgrey;
+    height:85px;
+    border-top:${props=>props.active===0?'':'1px solid lightgrey;'};
     display:flex;
     @media(min-width:575px){
-        height:62px;
+        height:66px;
     }
 `;
 
@@ -117,21 +119,24 @@ const LectureRankingListOrderWrapper = styled.div`
 `;
 const LectureRankingListContentWrapper = styled.div`
     width:250px;
+    height:80px;
     display:flex;
     flex-direction:column;
     justify-content:center;
-    padding-top:10px;
-
+    @media(min-width:575px){
+        height:67px;
+    }
 `;
 const LectureRankingListRatingWrapper = styled.div`
     width:30px;
     font-size:20px;
-    margin:3px 0px 0px 150px;
+    margin:0px 0px 0px 150px;
     height:75px;
     display:flex;
     align-items:center;
 
     @media(min-width:575px){
+        font-size:17px;
         margin:1px 0px 0px 100px;
         height:65px;
     }
@@ -206,7 +211,7 @@ const MainPageLectureRanking = () => {
                         {selectedLectureList.map((list,index)=>{
                             return(
                                 <LectureRankingList key={list.id}>
-                                    <LectureRankingListWrapper>
+                                    <LectureRankingListWrapper active={index}>
                                         <LectureRankingListOrderWrapper>{'0'+(index+1)}</LectureRankingListOrderWrapper>
                                         <LectureRankingListContentWrapper>
                                             <LectureRankingListNameWrapper>{list.name}</LectureRankingListNameWrapper>

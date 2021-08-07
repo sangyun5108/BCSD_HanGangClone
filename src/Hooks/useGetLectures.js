@@ -1,4 +1,4 @@
-import { useGetLecturesQuery} from '../RTKquery/getGoodReviewLecturesAPI';
+import { useGetLecturesQuery} from '../API/getGoodReviewLecturesAPI';
 
   const useGetLectures = () => {
       const dataLists = [

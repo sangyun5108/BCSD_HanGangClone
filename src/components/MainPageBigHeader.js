@@ -6,7 +6,7 @@ const BigHeaderHeaderWrapper = styled.header`
 `;
 
 const BigHeaderWrapper = styled.nav`
-    height:82px;
+    height:80px;
     width:1150px;;
     display:flex;
     justify-content:space-between;
@@ -18,6 +18,7 @@ const BigHeaderLeftContents = styled.div`
     height:82px;
     justify-content:center;
     align-items:center;
+    position:relative;
 `;
 
 const BigHeaderLeftContentsUl = styled.ul`
