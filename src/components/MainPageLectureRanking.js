@@ -211,7 +211,7 @@ const MainPageLectureRanking = () => {
                             return(
                                 <LectureRankingList key={list.id}>
                                     <LectureRankingListWrapper active={index}>
-                                        <LectureRankingListOrderWrapper>{'0'+(index+1)}</LectureRankingListOrderWrapper>
+                                        <LectureRankingListOrderWrapper>{index+1}</LectureRankingListOrderWrapper>
                                         <LectureRankingListContentWrapper>
                                             <LectureRankingListNameWrapper>{list.name}</LectureRankingListNameWrapper>
                                             <LectureRankingListProfessorWrapper>{list.professor}</LectureRankingListProfessorWrapper>
