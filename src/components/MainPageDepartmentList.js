@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { LECTURE_RANKING_LIST } from './MainPageLectureRanking';
 
 const DepartmentSectionWrapper = styled.section`
+    width:100%;
     @media(min-width:575px){
         width:1150px;
         margin:0 auto;
@@ -10,9 +11,9 @@ const DepartmentSectionWrapper = styled.section`
 `;
 
 const DepartmentListTitle = styled.h1`
-    width:80px;
+    width:95%;
     font-size:16px;
-    margin:15px 0px 10px 35px;
+    margin:15px auto 10px auto;
     font-weight:700;
 
     @media(min-width:575px){
@@ -21,11 +22,9 @@ const DepartmentListTitle = styled.h1`
 `
 
 const DepartmentListsWrapper = styled.div`
-    width:574px;
-    margin:0 auto;
-    padding-left:30px;
     height:130px;
     overflow:scroll;
+    padding:0px 5px 0px 5px;
 
     @media(min-width:575px){
         width:1166.5px;
@@ -37,6 +36,7 @@ const DepartmentListsWrapper = styled.div`
 
 const DepartmentListUlWrapper = styled.ul`
     padding-left:0px;
+    padding-right:5px;
     display:flex;
 `;
 
@@ -47,7 +47,7 @@ const DepartmentList = styled.li`
 const DepartmentListWrapper = styled.div`
     width:100px;
     height:90px;
-    margin:5px;
+    margin:${props=>props.title?'5px 10px 5px 5px':'5px'};
     border-radius:10px;
     background-image:url(${props=>props.active&&props.active});
     background-size:cover;
