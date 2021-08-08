@@ -2,7 +2,7 @@ import React,{useEffect,useState} from 'react';
 import styled from 'styled-components';
 
 const MainPageRecentLectureSection = styled.section`
-    width:500px;
+    width:100%;
     margin:10px auto;
     @media(min-width:575px){
         margin: 10px 0px 0px 35px;
@@ -11,6 +11,8 @@ const MainPageRecentLectureSection = styled.section`
 `;
 
 const MainPageRecentLectureTitleWrapper = styled.div`
+    width:95%;
+    margin:0 auto;
     margin-bottom:5px;
     font-weight:700;
 `;
@@ -18,7 +20,8 @@ const MainPageRecentLectureTitleWrapper = styled.div`
 const MainPageRecentLectureWrapper = styled.div`
     border:2px solid rgb(238, 238, 238);
     border-radius:15px;
-    width:500px;
+    width:95%;
+    margin:0 auto;
     height:400px;
     color:grey;
 
@@ -36,7 +39,7 @@ const MainPageRecentLectureContentUl = styled.ul`
 `;
 
 const MainPageRecentLectureContentLi = styled.li`
-    width:500px;
+    width:100%;
     list-style:none;
     height:80px;
     display:flex;
