@@ -11,11 +11,11 @@ const GlobalStyle = createGlobalStyle`
   }
   html{
     width:100%;
+    height:100%;
   }
   body{
   }
   #root{
-    height:2050px;
     @media(min-width:575px){
       height:1500px;
     }

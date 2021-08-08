@@ -3,18 +3,18 @@ import styled from 'styled-components';
 import useGetLectures from '../Hooks/useGetLectures';
 
 const LectureRankingSectionWrapper = styled.section`
-    width:500px;
-    height:530px;
+    width:100%;
     margin:0 auto;
 
     @media(min-width:575px){
+        width:500px;
         height:420px;
 `;
 
 const LectureRankingTitle = styled.h1`
-    width:75px;
-    text-align:center;
-    font-size:18px;
+    width:80%;
+    margin:0 auto;
+    font-size:16px;
     font-weight:800;
     margin-bottom:10px;
     @media(min-width:575px){
@@ -26,10 +26,10 @@ const LectureRankingTitle = styled.h1`
 `;
 
 const LectureRankingWrapper = styled.div`
+    width:80%;
+    margin:0 auto;
     border:2px solid rgb(238, 238, 238);
     border-radius:15px;
-    width:500px;
-    height:490px;
     @media(min-width:575px){
         width:480px;
         height:385px;
@@ -38,7 +38,7 @@ const LectureRankingWrapper = styled.div`
 `
 const LectureRankingListTitleWrapper = styled.div`
     overflow:scroll;
-    height:63px;
+    height:54px;
     font-weight:700;
     @media(min-width:575px){
         width:480px;
@@ -50,8 +50,7 @@ const LectureRankingListTitleWrapper = styled.div`
 
 const LectureRankingListTitleUlWrapper = styled.ul`
     border-radius:12px 12px 0px 0px;
-    width:821px;
-    height:63px;
+    height:54px;
     display:flex;
     padding-left:0px;
     @media(min-width:575px){
@@ -61,10 +60,9 @@ const LectureRankingListTitleUlWrapper = styled.ul`
 `;
 
 const LectureRankingListTitle = styled.li`
+    width:20%;
     list-style:none;
     text-align:center;
-    width:83px;
-    height:62px;
     border-bottom:${props=>props.active?'2px solid rgb(255, 171, 46)':'2px solid rgb(238, 238, 238)'};
     display:flex;
     justify-content:center;
@@ -78,7 +76,7 @@ const LectureRankingListTitle = styled.li`
 
 const LectureRankingListTitleContext = styled.div`
     cursor:pointer;
-    font-size:16px;
+    font-size:14px;
     width:80px;
     @media(min-width:575px){
         width:40px;
@@ -91,7 +89,6 @@ const LectureRankingListUlWrapper = styled.ul`
 `;
 
 const LectureRankingListWrapper = styled.div`
-    height:85px;
     border-top:${props=>props.active===0?'':'1px solid lightgrey;'};
     display:flex;
     @media(min-width:575px){
@@ -105,7 +102,7 @@ const LectureRankingList = styled.li`
 `;
 
 const LectureRankingListOrderWrapper = styled.div`
-    width:50px;
+    width:20%;
     font-size:20px;
     display:flex;
     justify-content:center;
@@ -118,41 +115,43 @@ const LectureRankingListOrderWrapper = styled.div`
     }
 `;
 const LectureRankingListContentWrapper = styled.div`
-    width:250px;
-    height:80px;
+    width:60%;
     display:flex;
+    font-size:14px;
     flex-direction:column;
     justify-content:center;
     @media(min-width:575px){
+        width:250px;
         height:67px;
     }
 `;
 const LectureRankingListRatingWrapper = styled.div`
-    width:30px;
-    font-size:20px;
-    margin:0px 0px 0px 150px;
+    width:20%;
+    font-size:18px;
     height:75px;
     display:flex;
     align-items:center;
+    justify-content:center;
 
     @media(min-width:575px){
         font-size:17px;
         margin:1px 0px 0px 100px;
+        width:30px;
         height:65px;
     }
 `;
 const LectureRankingListNameWrapper = styled.div`
     margin-bottom:5px;
-    width:250px;
     @media(min-width:575px){
+        width:250px;
         font-size:15px;     
     }
 `;
 const LectureRankingListProfessorWrapper = styled.div`
-    width:180px;
-    font-size:15px;
+    font-size:12px;
     color:rgb(153, 153, 153);
     @media(min-width:575px){
+        width:180px;
         color:black;
         font-size:13px;
     }
