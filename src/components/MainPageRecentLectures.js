@@ -98,7 +98,7 @@ const MainPageRecentLecture = () => {
     const [recentLectures,setRecentLectures] = useState([]);
 
     useEffect(()=>{
-        setRecentLectures(JSON.parse(localStorage.getItem('최근 본 강의')));
+        setRecentLectures(JSON.parse(localStorage.getItem('최근 본 강의'))?JSON.parse(localStorage.getItem('최근 본 강의')):[]);
     },[])
 
     return(
