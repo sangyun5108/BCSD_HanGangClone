@@ -43,7 +43,7 @@ const TimeTableUl = styled.ul`
 
 const TimeTableList = styled.li`
     list-style:none;
-    border-bottom:1px solid rgb(238, 238, 238);
+    border-bottom:${props=>props.active?'':'1px solid rgb(238, 238, 238)'};
     padding-left:20px;
     display:flex;
     justify-content:space-between;
@@ -109,9 +109,9 @@ const MainPageTimeTable = () => {
                 <TimeTableTitleWrapper>내 시간표</TimeTableTitleWrapper>
                 <TimeTableWrapper>
                     <TimeTableUl>
-                        {TIMETABLE_LIST.map((list)=>{
+                        {TIMETABLE_LIST.map((list,index)=>{
                             return(
-                                <TimeTableList key={list.id}>
+                                <TimeTableList key={list.id} active={index===3}>
                                     <TimeTableListLeftContents>
                                         <TimeTableListLeftContentTitle>{list.name}</TimeTableListLeftContentTitle>
                                         <TimeTableListLeftContentProfessor>{list.professor}</TimeTableListLeftContentProfessor>
