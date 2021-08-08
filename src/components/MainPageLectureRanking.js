@@ -89,7 +89,7 @@ const LectureRankingListUlWrapper = styled.ul`
 `;
 
 const LectureRankingListWrapper = styled.div`
-    border-top:${props=>props.active===0?'':'1px solid lightgrey;'};
+    border-top:${props=>props.active===0?'':'1px solid rgb(238, 238, 238)'};
     display:flex;
     @media(min-width:575px){
         height:66px;
