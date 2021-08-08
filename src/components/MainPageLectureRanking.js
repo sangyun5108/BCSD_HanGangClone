@@ -28,7 +28,7 @@ const LectureRankingTitle = styled.h1`
 const LectureRankingWrapper = styled.div`
     width:95%;
     margin:0 auto;
-    border:2px solid rgb(238, 238, 238);
+    border:1px solid rgb(238, 238, 238);
     border-radius:15px;
     @media(min-width:575px){
         width:480px;
@@ -38,7 +38,7 @@ const LectureRankingWrapper = styled.div`
 `
 const LectureRankingListTitleWrapper = styled.div`
     overflow:scroll;
-    height:54px;
+    height:55px;
     font-weight:700;
     @media(min-width:575px){
         width:480px;
@@ -50,7 +50,7 @@ const LectureRankingListTitleWrapper = styled.div`
 
 const LectureRankingListTitleUlWrapper = styled.ul`
     border-radius:12px 12px 0px 0px;
-    height:54px;
+    height:55px;
     display:flex;
     padding-left:0px;
     @media(min-width:575px){
@@ -63,7 +63,7 @@ const LectureRankingListTitle = styled.li`
     width:20%;
     list-style:none;
     text-align:center;
-    border-bottom:${props=>props.active?'2px solid rgb(255, 171, 46)':'2px solid rgb(238, 238, 238)'};
+    border-bottom:${props=>props.active?'2px solid rgb(255, 171, 46)':'1px solid rgb(238, 238, 238)'};
     display:flex;
     justify-content:center;
     align-items:center;

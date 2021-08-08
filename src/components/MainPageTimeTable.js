@@ -24,7 +24,7 @@ const TimeTableWrapper = styled.div`
     width:95%;
     height:300px;
     margin: 0 auto;
-    border:2px solid rgb(238, 238, 238);
+    border:1px solid rgb(238, 238, 238);
     border-radius:15px;
     display:flex;
     justify-content:center;

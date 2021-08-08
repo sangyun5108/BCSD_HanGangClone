@@ -18,7 +18,7 @@ const MainPageRecentLectureTitleWrapper = styled.div`
 `;
 
 const MainPageRecentLectureWrapper = styled.div`
-    border:2px solid rgb(238, 238, 238);
+    border:1px solid rgb(238, 238, 238);
     border-radius:15px;
     width:95%;
     margin:0 auto;

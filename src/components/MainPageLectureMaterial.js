@@ -24,7 +24,7 @@ const MainPageLectureMaterialWrapper = styled.div`
     margin: 0 auto;
     font-size:14px;
     height:300px;
-    border:2px solid rgb(238, 238, 238);
+    border:1px solid rgb(238, 238, 238);
     border-radius:15px;
     display:flex;
     justify-content:center;
