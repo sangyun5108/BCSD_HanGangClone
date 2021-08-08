@@ -17,6 +17,10 @@ const MainPageLectureMaterialTitleWrapper = styled.h1`
     font-size:16px;
     font-weight:600;
     margin-bottom:5px;
+    @media(min-width:575px){
+        width:75px;
+        margin:0px 0px 5px 0px;
+    }
 `
 
 const MainPageLectureMaterialWrapper = styled.div`

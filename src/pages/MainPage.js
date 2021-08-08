@@ -9,6 +9,7 @@ const MainPage = () => {
     let [isMobile,setIsMobile] = useState(window.matchMedia('(max-width:574px)').matches);
 
     useEffect(()=>{
+
         const checkScreenWidth = () => {
             let checkScreen = window.matchMedia('(max-width:574px)').matches;
             if(checkScreen!==isMobile){

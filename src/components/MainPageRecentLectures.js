@@ -15,6 +15,12 @@ const MainPageRecentLectureTitleWrapper = styled.div`
     margin:0 auto;
     margin-bottom:5px;
     font-weight:700;
+
+    @media(min-width:575px){
+        width:100px;
+        margin:0px;
+        margin-bottom:5px;
+    }
 `;
 
 const MainPageRecentLectureWrapper = styled.div`
@@ -85,6 +91,8 @@ const MainPageRecentLectureContentRightContentRating = styled.div`
     }
 `;
 
+const getItem = JSON.parse(localStorage.getItem('최근 본 강의'));
+
 export const LECENT_LECTURES = [
     {name:'사랑의역사',professor:'김사랑',rating:'3.2',id:'사랑의역사김사랑'},
     {name:'하트의역사',professor:'박사랑',rating:'3.2',id:'하트의역사박사랑'},
@@ -98,7 +106,7 @@ const MainPageRecentLecture = () => {
     const [recentLectures,setRecentLectures] = useState([]);
 
     useEffect(()=>{
-        setRecentLectures(JSON.parse(localStorage.getItem('최근 본 강의'))?JSON.parse(localStorage.getItem('최근 본 강의')):[]);
+        setRecentLectures(getItem?getItem:[]);
     },[])
 
     return(
