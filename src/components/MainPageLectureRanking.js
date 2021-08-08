@@ -12,7 +12,7 @@ const LectureRankingSectionWrapper = styled.section`
 `;
 
 const LectureRankingTitle = styled.h1`
-    width:80%;
+    width:95%;
     margin:0 auto;
     font-size:16px;
     font-weight:800;
@@ -26,7 +26,7 @@ const LectureRankingTitle = styled.h1`
 `;
 
 const LectureRankingWrapper = styled.div`
-    width:80%;
+    width:95%;
     margin:0 auto;
     border:2px solid rgb(238, 238, 238);
     border-radius:15px;
