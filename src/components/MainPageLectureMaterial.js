@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const MainPageLectureMaterialSectionWrapper = styled.section`
-    width:500px;
+    width:100%;
     margin:0 auto;
     margin-top:10px;
     @media(min-width:575px){
@@ -12,14 +12,17 @@ const MainPageLectureMaterialSectionWrapper = styled.section`
 `;
 
 const MainPageLectureMaterialTitleWrapper = styled.h1`
-    width:70px;
+    width:95%;
+    margin:0 auto;
     font-size:16px;
     font-weight:600;
     margin-bottom:5px;
 `
 
 const MainPageLectureMaterialWrapper = styled.div`
-    width:500px;
+    width:95%;
+    margin: 0 auto;
+    font-size:14px;
     height:300px;
     border:2px solid rgb(238, 238, 238);
     border-radius:15px;
