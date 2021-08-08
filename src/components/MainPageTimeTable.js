@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 
 const TimeTableSectionWrapper = styled.section`
-    width:500px;
+    width:100%;
     margin: 0 auto;
     margin-top:10px;
 
@@ -11,7 +11,8 @@ const TimeTableSectionWrapper = styled.section`
     }
 `;
 const TimeTableTitleWrapper = styled.h1`
-    width:70px;
+    width:95%;
+    margin: 0px auto;
     font-size:16px;
     font-weight:700;
     margin-bottom:10px;
@@ -20,8 +21,9 @@ const TimeTableTitleWrapper = styled.h1`
     }
 `;
 const TimeTableWrapper = styled.div`
-    width:500px;
+    width:95%;
     height:300px;
+    margin: 0 auto;
     border:2px solid rgb(238, 238, 238);
     border-radius:15px;
     display:flex;
@@ -57,13 +59,14 @@ const TimeTableListLeftContents = styled.div`
 
 const TimeTableListLeftContentTitle = styled.div`
     font-weight:700;
+    font-size:14px;
     @media(min-width:575px){
         font-size:14px;
     }
 `;
 
 const TimeTableListLeftContentProfessor = styled.div`
-    font-size:14px;
+    font-size:12px;
     color:#999999;
     @media(min-width:575px){
         font-size:12px;
@@ -78,9 +81,10 @@ const TimeTableListRightContents = styled.div`
 `;
 
 const TimeTableListRightButton = styled.button`
-    width:75px;
-    height:25px;
+    width:60px;
+    height:28px;
     border:none;
+    font-size:12px;
     border-radius:15px;
     background-color:${props=>props.active?'':'#238bfe'};
     color:${props=>props.active?'':'#ffffff'};
