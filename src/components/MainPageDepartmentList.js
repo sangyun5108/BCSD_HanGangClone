@@ -22,7 +22,6 @@ const DepartmentListTitle = styled.h1`
 `
 
 const DepartmentListsWrapper = styled.div`
-    height:130px;
     overflow:scroll;
     padding:0px 5px 0px 5px;
 
