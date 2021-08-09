@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import styled from 'styled-components';
-import useGetLectures from '../Hooks/useGetLectures';
+import { useGetLecturesQuery } from '../API/getGoodReviewLecturesAPI';
 
 const LectureRankingSectionWrapper = styled.section`
     width:100%;
@@ -171,43 +171,34 @@ export const LECTURE_RANKING_LIST = [
 ]
 
 const MainPageLectureRanking = () => {
-    const dataLists= useGetLectures();
-    const [selectedTitle,setSelectedTitle]=useState('');
-    const [selectedLectureList,setSelectedLectureList] = useState([]);
+
+    const [selectedTitle,setSelectedTitle]=useState({title:'교양',departmentId:10});
+    const { data, error, isLoading} = useGetLecturesQuery(selectedTitle.departmentId);
 
     const onClickTitle = (e) => {
-        const selectedLists = dataLists[e.target.id].data.result
-        .map((list)=>{
-            return {
-                title:e.target.innerText,
-                name:list.name,
-                professor:list.professor,
-                rating:list.total_rating,
-                id:list.id
-            }
-        })
-        setSelectedLectureList(selectedLists);
-        setSelectedTitle(e.target.innerText);
+        setSelectedTitle({title:e.target.innerText,departmentId:e.target.id});
     }
 
     return(
-        <>
+        <>  
             <LectureRankingSectionWrapper>
                 <LectureRankingTitle>강의랭킹</LectureRankingTitle>
                 <LectureRankingWrapper>
                     <LectureRankingListTitleWrapper>
                         <LectureRankingListTitleUlWrapper>
-                            {LECTURE_RANKING_LIST.map((list,index)=>{
+                            {LECTURE_RANKING_LIST.map((list)=>{
                                 return(
-                                    <LectureRankingListTitle key={list.id} active={selectedTitle===list.title}>
-                                        <LectureRankingListTitleContext onClick={(e)=>onClickTitle(e)} id={index}>{list.title}</LectureRankingListTitleContext>
+                                    <LectureRankingListTitle key={list.id} active={selectedTitle.title===list.title}>
+                                        <LectureRankingListTitleContext onClick={(e)=>onClickTitle(e)} id={list.id}>{list.title}</LectureRankingListTitleContext>
                                     </LectureRankingListTitle>
                                 );
                             })}
                         </LectureRankingListTitleUlWrapper>
                     </LectureRankingListTitleWrapper>
                     <LectureRankingListUlWrapper>
-                        {selectedLectureList.map((list,index)=>{
+                        {error?(<>Error</>)
+                        :isLoading?(<></>)
+                        :data?(data.result).map((list,index)=>{
                             return(
                                 <LectureRankingList key={list.id}>
                                     <LectureRankingListWrapper active={index}>
@@ -216,11 +207,11 @@ const MainPageLectureRanking = () => {
                                             <LectureRankingListNameWrapper>{list.name}</LectureRankingListNameWrapper>
                                             <LectureRankingListProfessorWrapper>{list.professor}</LectureRankingListProfessorWrapper>
                                         </LectureRankingListContentWrapper>
-                                        <LectureRankingListRatingWrapper>{Number.isInteger(list.rating)?`${list.rating}.0`:list.rating.toFixed(1)}</LectureRankingListRatingWrapper>
+                                        <LectureRankingListRatingWrapper>{Number.isInteger(list.total_rating)?`${list.total_rating}.0`:list.total_rating.toFixed(1)}</LectureRankingListRatingWrapper>
                                     </LectureRankingListWrapper>
                                 </LectureRankingList>
                             )
-                        })}
+                        }):null}
                     </LectureRankingListUlWrapper>
                 </LectureRankingWrapper>
             </LectureRankingSectionWrapper>
