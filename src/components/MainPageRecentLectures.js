@@ -106,7 +106,7 @@ const MainPageRecentLecture = () => {
     const [recentLectures,setRecentLectures] = useState([]);
 
     useEffect(()=>{
-        setRecentLectures(getItem?getItem:[]);
+        setRecentLectures(getItem??[]);
     },[])
 
     return(
