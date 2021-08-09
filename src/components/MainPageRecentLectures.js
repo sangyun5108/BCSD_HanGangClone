@@ -64,7 +64,7 @@ const MainPageRecentLectureContentLeft = styled.div`
     margin-left:20px;
 `;
 const MainPageRecentLectureContentLeftTitle = styled.div`
-    font-size:16px;
+    font-size:14px;
     font-weight:700;
     color:black;
     @media(min-width:575px){
@@ -72,7 +72,7 @@ const MainPageRecentLectureContentLeftTitle = styled.div`
     }
 `;
 const MainPageRecentLectureContentLeftProfessor =styled.div`
-    font-size:14px;
+    font-size:12px;
     @media(min-width:575px){
         font-size:12px;
     }
@@ -106,7 +106,7 @@ const MainPageRecentLecture = () => {
     const [recentLectures,setRecentLectures] = useState([]);
 
     useEffect(()=>{
-        setRecentLectures(getItem?getItem:[]);
+        setRecentLectures(getItem??[]);
     },[])
 
     return(
