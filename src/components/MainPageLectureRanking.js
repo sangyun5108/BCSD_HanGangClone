@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import styled from 'styled-components';
 import { useGetLecturesQuery } from '../API/getGoodReviewLecturesAPI';
+import { DEPARTMENT_LIST } from '../static/departmentList';
 
 const LectureRankingSectionWrapper = styled.section`
     width:100%;
@@ -164,19 +165,6 @@ const LectureRankingListProfessorWrapper = styled.div`
     }
 `;
 
-export const LECTURE_RANKING_LIST = [
-    {title:'교양',id:10,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/culture.png'},
-    {title:'HRD',id:9,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/hrd.png'},
-    {title:'기계',id:1,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/machine.png'},
-    {title:'메카',id:3,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/mecha.png'},
-    {title:'산경',id:7,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/industrial.png'},
-    {title:'에신화',id:6,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/energe.png'},
-    {title:'컴공',id:2,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/computer.png'},
-    {title:'융합',id:8,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/fusion.png'},
-    {title:'전전통',id:4,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/electrocity.png'},
-    {title:'디ㆍ건',id:5,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/design.png'}
-]
-
 const MainPageLectureRanking = () => {
 
     const [selectedTitle,setSelectedTitle]=useState({title:'교양',departmentId:10});
@@ -193,7 +181,7 @@ const MainPageLectureRanking = () => {
                 <LectureRankingWrapper>
                     <LectureRankingListTitleWrapper>
                         <LectureRankingListTitleUlWrapper>
-                            {LECTURE_RANKING_LIST.map((list,index)=>{
+                            {DEPARTMENT_LIST.map((list,index)=>{
                                 return(
                                     <LectureRankingListTitle order={index} key={list.id} active={selectedTitle.title===list.title}>
                                         <LectureRankingListTitleContext active={selectedTitle.title===list.title} onClick={(e)=>onClickTitle(e)} id={list.id}>{list.title}</LectureRankingListTitleContext>
