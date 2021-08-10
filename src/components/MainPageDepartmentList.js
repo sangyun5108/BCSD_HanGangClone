@@ -62,7 +62,9 @@ const DepartmentListWrapper = styled.div`
 
 const DepartmentListContext = styled.div`
     color:white;
-    font-size:14px;
+    width:67px;
+    text-align:center;
+    font-size:12px;
     margin-bottom:5px;
 `;
 
@@ -73,11 +75,11 @@ const MainPageDepartmentList = () => {
                 <DepartmentListTitle>학부별 탐색</DepartmentListTitle>
                 <DepartmentListsWrapper>
                         <DepartmentListUlWrapper>
-                            {LECTURE_RANKING_LIST.map((list)=>{
+                            {LECTURE_RANKING_LIST.map((list,index)=>{
                                 return(
                                     <DepartmentList key={list.id+100} onClick={()=>alert(`${list.title}학부입니다`)}>
                                         <DepartmentListWrapper active={list.img} title={list.title}>
-                                            <DepartmentListContext className={list.title}>{list.title}</DepartmentListContext>
+                                            <DepartmentListContext active={index} className={list.title}>{list.title_long}</DepartmentListContext>
                                         </DepartmentListWrapper>
                                     </DepartmentList>
                                 )
