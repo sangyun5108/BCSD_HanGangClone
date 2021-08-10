@@ -8,5 +8,5 @@ export const DEPARTMENT_LIST = [
     {title:'컴공',title_long:'컴퓨터공학부',id:2,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/computer.png'},
     {title:'융합',title_long:'융합학과',id:8,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/fusion.png'},
     {title:'전전통',title_long:'전기전자통신공학부',id:4,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/electrocity.png'},
-    {title:'디・건',title_long:'디자인 건축공학부',id:5,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/design.png'}
+    {title:'디건',title_long:'디자인 건축공학부',id:5,img:'https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/major/design.png'}
 ]
