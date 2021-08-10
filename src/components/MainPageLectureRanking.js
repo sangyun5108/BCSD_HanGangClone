@@ -12,7 +12,7 @@ const LectureRankingSectionWrapper = styled.section`
 `;
 
 const LectureRankingTitle = styled.h1`
-    width:95%;
+    width:90%;
     margin:0 auto;
     font-size:16px;
     font-weight:800;
@@ -26,19 +26,20 @@ const LectureRankingTitle = styled.h1`
 `;
 
 const LectureRankingWrapper = styled.div`
-    width:95%;
+    width:90%;
+    height:436px;
     margin:0 auto;
     border:1px solid rgb(238, 238, 238);
     border-radius:15px;
     @media(min-width:575px){
-        width:480px;
+        width:482px;
         height:385px;
         margin-left:0px;
     }
 `
 const LectureRankingListTitleWrapper = styled.div`
     overflow:scroll;
-    height:55px;
+    height:58px;
     font-weight:700;
     @media(min-width:575px){
         width:480px;
@@ -49,7 +50,9 @@ const LectureRankingListTitleWrapper = styled.div`
 `
 
 const LectureRankingListTitleUlWrapper = styled.ul`
+    width:200%;
     border-radius:12px 12px 0px 0px;
+    border-bottom:1px solid rgb(238,238,238);
     height:55px;
     display:flex;
     padding-left:0px;
@@ -63,24 +66,28 @@ const LectureRankingListTitle = styled.li`
     width:20%;
     list-style:none;
     text-align:center;
-    border-bottom:${props=>props.active?'2px solid rgb(255, 171, 46)':'1px solid rgb(238, 238, 238)'};
+    border-bottom:${props=>props.active?'2px solid rgb(255, 171, 46)':''};
+    margin-right:${props=>props.order===9?'20px':'30px'};
+    margin-left:${props=>props.order===0?'20px':''};
+
     display:flex;
     justify-content:center;
     align-items:center;
     color:${props=>props.active?'#238bfe':'rgb(153, 153, 153)'};
     @media(min-width:575px){
-        width:47.5px;
+        width:40px;
         height:50px;
+        margin:0px 4px 0px 4px;
     }
 `;
 
 const LectureRankingListTitleContext = styled.div`
     cursor:pointer;
-    font-size:14px;
-    width:80px;
+    margin-bottom:${props=>props.active?'-2px':''};
+    font-size:15px;
     @media(min-width:575px){
         width:40px;
-        font-size:13px;
+        font-size:12px;
     }
 `;
 
@@ -99,10 +106,13 @@ const LectureRankingListWrapper = styled.div`
 const LectureRankingList = styled.li`
     width:100%;
     list-style:none;
+    @media(min-width:575px){
+        width:482px;
+    }
 `;
 
 const LectureRankingListOrderWrapper = styled.div`
-    width:20%;
+    width:15%;
     font-size:20px;
     display:flex;
     justify-content:center;
@@ -115,18 +125,17 @@ const LectureRankingListOrderWrapper = styled.div`
     }
 `;
 const LectureRankingListContentWrapper = styled.div`
-    width:60%;
+    width:70%;
     display:flex;
     font-size:14px;
     flex-direction:column;
     justify-content:center;
     @media(min-width:575px){
-        width:250px;
-        height:67px;
+
     }
 `;
 const LectureRankingListRatingWrapper = styled.div`
-    width:20%;
+    width:15%;
     font-size:18px;
     height:75px;
     display:flex;
@@ -135,8 +144,6 @@ const LectureRankingListRatingWrapper = styled.div`
 
     @media(min-width:575px){
         font-size:17px;
-        margin:1px 0px 0px 100px;
-        width:30px;
         height:65px;
     }
 `;
@@ -186,10 +193,10 @@ const MainPageLectureRanking = () => {
                 <LectureRankingWrapper>
                     <LectureRankingListTitleWrapper>
                         <LectureRankingListTitleUlWrapper>
-                            {LECTURE_RANKING_LIST.map((list)=>{
+                            {LECTURE_RANKING_LIST.map((list,index)=>{
                                 return(
-                                    <LectureRankingListTitle key={list.id} active={selectedTitle.title===list.title}>
-                                        <LectureRankingListTitleContext onClick={(e)=>onClickTitle(e)} id={list.id}>{list.title}</LectureRankingListTitleContext>
+                                    <LectureRankingListTitle order={index} key={list.id} active={selectedTitle.title===list.title}>
+                                        <LectureRankingListTitleContext active={selectedTitle.title===list.title} onClick={(e)=>onClickTitle(e)} id={list.id}>{list.title}</LectureRankingListTitleContext>
                                     </LectureRankingListTitle>
                                 );
                             })}
