@@ -12,7 +12,7 @@ const MainPageLectureMaterialSectionWrapper = styled.section`
 `;
 
 const MainPageLectureMaterialTitleWrapper = styled.h1`
-    width:95%;
+    width:90%;
     margin:0 auto;
     font-size:16px;
     font-weight:600;
@@ -24,7 +24,7 @@ const MainPageLectureMaterialTitleWrapper = styled.h1`
 `
 
 const MainPageLectureMaterialWrapper = styled.div`
-    width:95%;
+    width:90%;
     margin: 0 auto;
     font-size:14px;
     height:300px;
@@ -41,6 +41,8 @@ const MainPageLectureMaterialWrapper = styled.div`
 
 const MainPageLectureMaterialContextWrapper = styled.div`
     color:grey;
+    width:345px;
+    text-align:center;
 `;
 
 const MainPageLectureMaterial = () => {
