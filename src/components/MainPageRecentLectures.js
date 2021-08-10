@@ -11,7 +11,7 @@ const MainPageRecentLectureSection = styled.section`
 `;
 
 const MainPageRecentLectureTitleWrapper = styled.div`
-    width:95%;
+    width:90%;
     margin:0 auto;
     margin-bottom:5px;
     font-weight:700;
@@ -26,7 +26,7 @@ const MainPageRecentLectureTitleWrapper = styled.div`
 const MainPageRecentLectureWrapper = styled.div`
     border:1px solid rgb(238, 238, 238);
     border-radius:15px;
-    width:95%;
+    width:90%;
     margin:0 auto;
     height:400px;
     color:grey;
