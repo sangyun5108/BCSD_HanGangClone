@@ -56,6 +56,7 @@ const LectureRankingListTitleUlWrapper = styled.ul`
     border-bottom:1px solid rgb(238,238,238);
     height:55px;
     display:flex;
+    justify-content:center;
     padding-left:0px;
     @media(min-width:575px){
         width:480px;
@@ -76,7 +77,7 @@ const LectureRankingListTitle = styled.li`
     align-items:center;
     color:${props=>props.active?'#238bfe':'rgb(153, 153, 153)'};
     @media(min-width:575px){
-        width:40px;
+        width:38px;
         height:50px;
         margin:0px 4px 0px 4px;
     }
