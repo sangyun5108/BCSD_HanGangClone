@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { LECTURE_RANKING_LIST } from './MainPageLectureRanking';
+import { DEPARTMENT_LIST } from '../static/departmentList';
 
 const DepartmentSectionWrapper = styled.section`
     width:100%;
@@ -11,7 +11,7 @@ const DepartmentSectionWrapper = styled.section`
 `;
 
 const DepartmentListTitle = styled.h1`
-    width:95%;
+    width:90%;
     font-size:16px;
     margin:15px auto 10px auto;
     font-weight:700;
@@ -23,7 +23,7 @@ const DepartmentListTitle = styled.h1`
 
 const DepartmentListsWrapper = styled.div`
     overflow:scroll;
-    padding:0px 5px 0px 5px;
+    padding-left:15px;
 
     @media(min-width:575px){
         width:1166.5px;
@@ -45,8 +45,8 @@ const DepartmentList = styled.li`
 
 const DepartmentListWrapper = styled.div`
     width:100px;
-    height:90px;
-    margin:${props=>props.title?'5px 10px 5px 5px':'5px'};
+    height:87px;
+    margin:${props=>props.order?'5px 20px 5px 5px':'5px'};
     border-radius:10px;
     background-image:url(${props=>props.active&&props.active});
     background-size:cover;
@@ -75,10 +75,10 @@ const MainPageDepartmentList = () => {
                 <DepartmentListTitle>학부별 탐색</DepartmentListTitle>
                 <DepartmentListsWrapper>
                         <DepartmentListUlWrapper>
-                            {LECTURE_RANKING_LIST.map((list,index)=>{
+                            {DEPARTMENT_LIST.map((list,index)=>{
                                 return(
                                     <DepartmentList key={list.id+100} onClick={()=>alert(`${list.title}학부입니다`)}>
-                                        <DepartmentListWrapper active={list.img} title={list.title}>
+                                        <DepartmentListWrapper active={list.img} order={index===9}>
                                             <DepartmentListContext active={index} className={list.title}>{list.title_long}</DepartmentListContext>
                                         </DepartmentListWrapper>
                                     </DepartmentList>
