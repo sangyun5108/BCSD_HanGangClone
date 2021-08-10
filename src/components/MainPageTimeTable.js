@@ -11,7 +11,7 @@ const TimeTableSectionWrapper = styled.section`
     }
 `;
 const TimeTableTitleWrapper = styled.h1`
-    width:95%;
+    width:90%;
     margin: 0px auto;
     font-size:16px;
     font-weight:700;
@@ -23,7 +23,7 @@ const TimeTableTitleWrapper = styled.h1`
     }
 `;
 const TimeTableWrapper = styled.div`
-    width:95%;
+    width:90%;
     height:300px;
     margin: 0 auto;
     border:1px solid rgb(238, 238, 238);
