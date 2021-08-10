@@ -46,7 +46,7 @@ const DepartmentList = styled.li`
 const DepartmentListWrapper = styled.div`
     width:100px;
     height:87px;
-    margin:${props=>props.order?'5px 20px 5px 5px':'5px'};
+    margin:${props=>props.order===9?'5px 20px 5px 5px':'5px'};
     border-radius:10px;
     background-image:url(${props=>props.active&&props.active});
     background-size:cover;
@@ -78,7 +78,7 @@ const MainPageDepartmentList = () => {
                             {DEPARTMENT_LIST.map((list,index)=>{
                                 return(
                                     <DepartmentList key={list.id+100} onClick={()=>alert(`${list.title}학부입니다`)}>
-                                        <DepartmentListWrapper active={list.img} order={index===9}>
+                                        <DepartmentListWrapper active={list.img} order={index}>
                                             <DepartmentListContext active={index} className={list.title}>{list.title_long}</DepartmentListContext>
                                         </DepartmentListWrapper>
                                     </DepartmentList>
