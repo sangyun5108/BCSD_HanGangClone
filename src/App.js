@@ -17,6 +17,8 @@ const GlobalStyle = createGlobalStyle`
   }
   #root{
     min-width:360px;
+    height:1950px;
+
     @media(min-width:575px){
       height:1500px;
     }

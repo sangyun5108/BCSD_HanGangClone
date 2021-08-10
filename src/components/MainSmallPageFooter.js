@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 const MainSmallPageFooterContents = styled.div` 
     border:1px solid #FFFFFF;
-    width:574px;
     height:90px;
     display:flex;
     justify-content:space-between;
@@ -12,7 +11,7 @@ const MainSmallPageFooterContents = styled.div`
 `;
 
 const MainSmallPageFooterContent = styled.div`
-    width:110px;
+    width:20%;
     height:90px;
     display:flex;
     flex-direction:column;
@@ -27,6 +26,7 @@ const MainSmallPageFooterContentWrapper = styled.div`
     flex-direction:column;
     justify-content:center;
     align-items:center;
+    margin-top:${props=>props.active?'-2px':''};
 `;
 
 const MainSmallPageFooterImage = styled.img`
@@ -36,7 +36,7 @@ const MainSmallPageFooterImage = styled.img`
 `;
 
 const MainSmallPageFooterText = styled.div`
-    font-size:16px;
+    font-size:13px;
     font-weight:700;
     cursor:pointer;
 `;
@@ -64,7 +64,7 @@ const MainSmallPageFooter = () => {
                     {LIST_NAME.map((list)=>{
                         return(
                                 <MainSmallPageFooterContent active={list.id===isSelected} key={list.id}>
-                                    <MainSmallPageFooterContentWrapper onClick={(e)=>onClickTitle(e)} id={list.id}>
+                                    <MainSmallPageFooterContentWrapper active={list.id===isSelected} onClick={(e)=>onClickTitle(e)} id={list.id}>
                                         <MainSmallPageFooterImage active={list.id===isSelected} src={list.id===isSelected?list.pathBlue:list.path} className={list.class}/>
                                         <MainSmallPageFooterText>{list.name}</MainSmallPageFooterText>
                                     </MainSmallPageFooterContentWrapper>
