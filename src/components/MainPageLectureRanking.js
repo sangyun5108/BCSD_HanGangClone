@@ -69,7 +69,7 @@ const LectureRankingListTitle = styled.li`
     list-style:none;
     text-align:center;
     border-bottom:${props=>props.active?'2px solid rgb(255, 171, 46)':''};
-    margin-right:${props=>props.order===9?'20px':'30px'};
+    margin-right:${props=>props.order===9?'20px':'15px'};
     margin-left:${props=>props.order===0?'20px':''};
 
     display:flex;
@@ -84,9 +84,9 @@ const LectureRankingListTitle = styled.li`
 `;
 
 const LectureRankingListTitleContext = styled.div`
+    width:100%;
     cursor:pointer;
     margin-bottom:${props=>props.active?'-2px':''};
-    font-size:15px;
     @media(min-width:575px){
         width:40px;
         font-size:12px;
