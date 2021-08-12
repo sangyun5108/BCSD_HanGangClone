@@ -46,14 +46,14 @@ const MainBigPageSectionsWrapper = styled.section`
     }
 `;
 
-const MainBigPageSectionsRightSectionWrapper = styled.section`
+const MainBigPageExceptLectureRankingWrapper = styled.section`
     width:650px;
     height:690px;
     display:flex;
     flex-direction:column;
 `;
 
-const MainBigPageSectionsRightSectionBottomWrapper = styled.section`
+const MainBigPageTimeTableRecentLectureWrapper = styled.section`
     display:flex;
 `;
 
@@ -71,13 +71,13 @@ const MainBigPage = () => {
                 <MainPageDepartmentList/>
                 <MainBigPageSectionsWrapper>
                     <MainPageLectureRanking/>
-                    <MainBigPageSectionsRightSectionWrapper>
+                    <MainBigPageExceptLectureRankingWrapper>
                         <MainPageLectureMaterial/>
-                        <MainBigPageSectionsRightSectionBottomWrapper>
+                        <MainBigPageTimeTableRecentLectureWrapper>
                             <MainPageTimeTable/>
                             <MainPageRecentLecture/>
-                        </MainBigPageSectionsRightSectionBottomWrapper>
-                    </MainBigPageSectionsRightSectionWrapper>
+                        </MainBigPageTimeTableRecentLectureWrapper>
+                    </MainBigPageExceptLectureRankingWrapper>
                 </MainBigPageSectionsWrapper>
                 <MainBigPageFooter/>
             </MainBigPageWrapper>
