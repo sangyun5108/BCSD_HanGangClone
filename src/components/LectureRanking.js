@@ -39,7 +39,12 @@ const LectureRankingWrapper = styled.div`
     }
 `
 const LectureRankingListTitleWrapper = styled.div`
-    overflow:scroll;
+    overflow:auto;
+    -ms-overflow-style:none;
+    scrollbar-width:none; 
+    ::-webkit-scrollbar {
+        display:none;
+    }
     height:58px;
     font-weight:700;
     @media(min-width:575px){
