@@ -22,8 +22,13 @@ const DepartmentListTitle = styled.h1`
 `
 
 const DepartmentListsWrapper = styled.div`
-    overflow:scroll;
+    overflow:auto;
     padding-left:15px;
+    -ms-overflow-style:none;
+    scrollbar-width:none; 
+    ::-webkit-scrollbar {
+        display:none;
+    }
 
     @media(min-width:575px){
         width:1166.5px;
