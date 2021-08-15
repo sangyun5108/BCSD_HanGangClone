@@ -81,11 +81,11 @@ const Department = () => {
                 <DepartmentListTitle>학부별 탐색</DepartmentListTitle>
                 <DepartmentListsWrapper>
                         <DepartmentLists>
-                            {DEPARTMENT_LIST.map((list,index)=>{
+                            {DEPARTMENT_LIST.map((data,index)=>{
                                 return(
-                                    <DepartmentList key={list.id+100} onClick={()=>alert(`${list.title}학부입니다`)}>
-                                        <DepartmentListWrapper active={list.img}>
-                                            <DepartmentListContent active={index} className={list.title}>{list.title_long}</DepartmentListContent>
+                                    <DepartmentList key={data.id+100} onClick={()=>alert(`${data.title}학부입니다`)}>
+                                        <DepartmentListWrapper active={data.img}>
+                                            <DepartmentListContent active={index} className={data.title}>{data.title_long}</DepartmentListContent>
                                         </DepartmentListWrapper>
                                     </DepartmentList>
                                 )
