@@ -4,6 +4,7 @@ import { DEPARTMENT_LIST } from '../static/departmentList';
 
 const DepartmentSection = styled.section`
     width:100%;
+    padding:0px 15px 0px 15px;
     @media(min-width:575px){
         width:1150px;
         margin:0 auto;
@@ -23,7 +24,6 @@ const DepartmentListTitle = styled.h1`
 
 const DepartmentListsWrapper = styled.div`
     overflow:auto;
-    padding-left:15px;
     -ms-overflow-style:none;
     scrollbar-width:none; 
     ::-webkit-scrollbar {
@@ -51,7 +51,7 @@ const DepartmentList = styled.li`
 const DepartmentListWrapper = styled.div`
     width:100px;
     height:87px;
-    margin:${props=>props.order===9?'5px 20px 5px 5px':'5px'};
+    margin:5px;
     border-radius:10px;
     background-image:url(${props=>props.active&&props.active});
     background-size:cover;
@@ -83,7 +83,7 @@ const Department = () => {
                             {DEPARTMENT_LIST.map((list,index)=>{
                                 return(
                                     <DepartmentList key={list.id+100} onClick={()=>alert(`${list.title}학부입니다`)}>
-                                        <DepartmentListWrapper active={list.img} order={index}>
+                                        <DepartmentListWrapper active={list.img}>
                                             <DepartmentListContent active={index} className={list.title}>{list.title_long}</DepartmentListContent>
                                         </DepartmentListWrapper>
                                     </DepartmentList>
