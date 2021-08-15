@@ -8,11 +8,12 @@ const DepartmentSection = styled.section`
     @media(min-width:575px){
         width:1150px;
         margin:0 auto;
+        padding:0px;
     }
 `;
 
 const DepartmentListTitle = styled.h1`
-    width:90%;
+    width:95%;
     font-size:16px;
     margin:15px auto 10px auto;
     font-weight:700;
