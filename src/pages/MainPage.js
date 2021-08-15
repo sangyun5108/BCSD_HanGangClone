@@ -1,8 +1,8 @@
 import React,{useState,useEffect} from 'react';
-import MainBigPage from '../components/MainBigPage';
-import MainSmallPage from '../components/MainSmallPage';
-import MainPageBigHeader from '../components/MainPageBigHeader';
-import MainPageSmallHeader from '../components/MainPageSmallHeader';
+import MainBigPage from './BigPage';
+import MainSmallPage from '../components/smallpage/MainSmallPage';
+import MainPageBigHeader from '../components/bigpage/Header';
+import MainPageSmallHeader from '../components/smallpage/MainPageSmallHeader';
 
 const MainPage = () => {
 
