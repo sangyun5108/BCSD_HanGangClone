@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { DEPARTMENT_LIST } from '../static/departmentList';
 
-const DepartmentSectionWrapper = styled.section`
+const DepartmentSection = styled.section`
     width:100%;
     @media(min-width:575px){
         width:1150px;
@@ -33,7 +33,7 @@ const DepartmentListsWrapper = styled.div`
     }
 `;
 
-const DepartmentListUlWrapper = styled.ul`
+const DepartmentLists = styled.ul`
     padding-left:0px;
     padding-right:5px;
     display:flex;
@@ -60,7 +60,7 @@ const DepartmentListWrapper = styled.div`
     }
 `;
 
-const DepartmentListContext = styled.div`
+const DepartmentListContent = styled.div`
     color:white;
     width:67px;
     text-align:center;
@@ -68,28 +68,28 @@ const DepartmentListContext = styled.div`
     margin-bottom:5px;
 `;
 
-const MainPageDepartmentList = () => {
+const Department = () => {
     return(
         <>  
-            <DepartmentSectionWrapper>
+            <DepartmentSection>
                 <DepartmentListTitle>학부별 탐색</DepartmentListTitle>
                 <DepartmentListsWrapper>
-                        <DepartmentListUlWrapper>
+                        <DepartmentLists>
                             {DEPARTMENT_LIST.map((list,index)=>{
                                 return(
                                     <DepartmentList key={list.id+100} onClick={()=>alert(`${list.title}학부입니다`)}>
                                         <DepartmentListWrapper active={list.img} order={index}>
-                                            <DepartmentListContext active={index} className={list.title}>{list.title_long}</DepartmentListContext>
+                                            <DepartmentListContent active={index} className={list.title}>{list.title_long}</DepartmentListContent>
                                         </DepartmentListWrapper>
                                     </DepartmentList>
                                 )
                             })}
-                        </DepartmentListUlWrapper>
+                        </DepartmentLists>
                 </DepartmentListsWrapper>
-            </DepartmentSectionWrapper>
+            </DepartmentSection>
         </>
     );
 }
 
 
-export default MainPageDepartmentList;
+export default Department;

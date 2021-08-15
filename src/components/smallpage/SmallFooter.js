@@ -1,16 +1,17 @@
 import React,{useState} from 'react';
 import styled from 'styled-components';
 
-const MainSmallPageFooterContents = styled.div` 
+const FooterLists = styled.ul` 
     border:1px solid #FFFFFF;
     height:90px;
     display:flex;
     justify-content:space-between;
     align-items:center;
     background-color:#FFFFFF;
+    padding-left:0px;
 `;
 
-const MainSmallPageFooterContent = styled.div`
+const FooterList = styled.li`
     width:20%;
     height:90px;
     display:flex;
@@ -21,7 +22,7 @@ const MainSmallPageFooterContent = styled.div`
     color:${props=>props.active?"#238bfe":"rgb(153, 153, 153)"};
 `;
 
-const MainSmallPageFooterContentWrapper = styled.div`
+const ListContent = styled.div`
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -29,13 +30,13 @@ const MainSmallPageFooterContentWrapper = styled.div`
     margin-top:${props=>props.active?'-2px':''};
 `;
 
-const MainSmallPageFooterImage = styled.img`
+const Icon = styled.img`
     width:30px;
     height:auto;
     cursor:pointer;
 `;
 
-const MainSmallPageFooterText = styled.div`
+const IconText = styled.div`
     font-size:13px;
     font-weight:700;
     cursor:pointer;
@@ -49,7 +50,7 @@ const LIST_NAME = [
     {name:'마이페이지',id:'mypage',path:'images/user.png',pathBlue:'images/user-blue.png'}
 ];
 
-const MainSmallPageFooter = () => {
+const SmallFooter = () => {
 
     const [isSelected, setIsSelected] = useState('홈');
 
@@ -60,20 +61,20 @@ const MainSmallPageFooter = () => {
     
     return(
         <>
-                <MainSmallPageFooterContents>
-                    {LIST_NAME.map((list)=>{
-                        return(
-                                <MainSmallPageFooterContent active={list.id===isSelected} key={list.id}>
-                                    <MainSmallPageFooterContentWrapper active={list.id===isSelected} onClick={(e)=>onClickTitle(e)} id={list.id}>
-                                        <MainSmallPageFooterImage active={list.id===isSelected} src={list.id===isSelected?list.pathBlue:list.path} className={list.class}/>
-                                        <MainSmallPageFooterText>{list.name}</MainSmallPageFooterText>
-                                    </MainSmallPageFooterContentWrapper>
-                                </MainSmallPageFooterContent>
+            <FooterLists>
+                {LIST_NAME.map((list)=>{
+                    return(
+                            <FooterList active={list.id===isSelected} key={list.id}>
+                                <ListContent active={list.id===isSelected} onClick={(e)=>onClickTitle(e)} id={list.id}>
+                                    <Icon active={list.id===isSelected} src={list.id===isSelected?list.pathBlue:list.path} className={list.class}/>
+                                    <IconText>{list.name}</IconText>
+                                </ListContent>
+                            </FooterList>
                         )
                     })}
-                </MainSmallPageFooterContents>
+            </FooterLists>
         </>
     );  
 }
 
-export default MainSmallPageFooter;
+export default SmallFooter;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useGetLecturesQuery } from '../API/getGoodReviewLecturesAPI';
 import { DEPARTMENT_LIST } from '../static/departmentList';
 
-const LectureRankingSectionWrapper = styled.section`
+const LectureRankingSection = styled.section`
     width:100%;
     margin:0 auto;
 
@@ -50,7 +50,7 @@ const LectureRankingListTitleWrapper = styled.div`
     }
 `
 
-const LectureRankingListTitleUlWrapper = styled.ul`
+const LectureRankingListsTitle = styled.ul`
     width:200%;
     border-radius:12px 12px 0px 0px;
     border-bottom:1px solid rgb(238,238,238);
@@ -83,7 +83,7 @@ const LectureRankingListTitle = styled.li`
     }
 `;
 
-const LectureRankingListTitleContext = styled.div`
+const TitleContent = styled.div`
     width:100%;
     cursor:pointer;
     margin-bottom:${props=>props.active?'-2px':''};
@@ -93,7 +93,7 @@ const LectureRankingListTitleContext = styled.div`
     }
 `;
 
-const LectureRankingListUlWrapper = styled.ul`
+const LectureRankingLists = styled.ul`
     padding-left:0px;
 `;
 
@@ -113,7 +113,7 @@ const LectureRankingList = styled.li`
     }
 `;
 
-const LectureRankingListOrderWrapper = styled.div`
+const ListOrder = styled.div`
     width:15%;
     font-size:20px;
     display:flex;
@@ -126,7 +126,7 @@ const LectureRankingListOrderWrapper = styled.div`
         width:60px;   
     }
 `;
-const LectureRankingListContentWrapper = styled.div`
+const ListContent = styled.div`
     width:70%;
     display:flex;
     font-size:14px;
@@ -136,7 +136,7 @@ const LectureRankingListContentWrapper = styled.div`
 
     }
 `;
-const LectureRankingListRatingWrapper = styled.div`
+const ListRating = styled.div`
     width:15%;
     font-size:18px;
     height:75px;
@@ -149,14 +149,14 @@ const LectureRankingListRatingWrapper = styled.div`
         height:65px;
     }
 `;
-const LectureRankingListNameWrapper = styled.div`
+const ListName = styled.div`
     margin-bottom:5px;
     @media(min-width:575px){
         width:250px;
         font-size:15px;     
     }
 `;
-const LectureRankingListProfessorWrapper = styled.div`
+const ListProfessor = styled.div`
     font-size:12px;
     color:rgb(153, 153, 153);
     @media(min-width:575px){
@@ -166,7 +166,7 @@ const LectureRankingListProfessorWrapper = styled.div`
     }
 `;
 
-const MainPageLectureRanking = () => {
+const LectureRanking = () => {
 
     const [selectedTitle,setSelectedTitle]=useState({title:'교양',departmentId:10});
     const { data, error, isLoading} = useGetLecturesQuery(selectedTitle.departmentId);
@@ -177,42 +177,42 @@ const MainPageLectureRanking = () => {
 
     return(
         <>  
-            <LectureRankingSectionWrapper>
+            <LectureRankingSection>
                 <LectureRankingTitle>강의랭킹</LectureRankingTitle>
                 <LectureRankingWrapper>
                     <LectureRankingListTitleWrapper>
-                        <LectureRankingListTitleUlWrapper>
+                        <LectureRankingListsTitle>
                             {DEPARTMENT_LIST.map((list,index)=>{
                                 return(
                                     <LectureRankingListTitle order={index} key={list.id} active={selectedTitle.title===list.title}>
-                                        <LectureRankingListTitleContext active={selectedTitle.title===list.title} onClick={(e)=>onClickTitle(e)} id={list.id}>{list.title}</LectureRankingListTitleContext>
+                                        <TitleContent active={selectedTitle.title===list.title} onClick={(e)=>onClickTitle(e)} id={list.id}>{list.title}</TitleContent>
                                     </LectureRankingListTitle>
                                 );
                             })}
-                        </LectureRankingListTitleUlWrapper>
+                        </LectureRankingListsTitle>
                     </LectureRankingListTitleWrapper>
-                    <LectureRankingListUlWrapper>
+                    <LectureRankingLists>
                         {error?(<>Error</>)
                         :isLoading?(<></>)
                         :data?(data.result).map((list,index)=>{
                             return(
                                 <LectureRankingList key={list.id}>
                                     <LectureRankingListWrapper active={index}>
-                                        <LectureRankingListOrderWrapper>{index+1}</LectureRankingListOrderWrapper>
-                                        <LectureRankingListContentWrapper>
-                                            <LectureRankingListNameWrapper>{list.name}</LectureRankingListNameWrapper>
-                                            <LectureRankingListProfessorWrapper>{list.professor}</LectureRankingListProfessorWrapper>
-                                        </LectureRankingListContentWrapper>
-                                        <LectureRankingListRatingWrapper>{Number.isInteger(list.total_rating)?`${list.total_rating}.0`:list.total_rating.toFixed(1)}</LectureRankingListRatingWrapper>
+                                        <ListOrder>{index+1}</ListOrder>
+                                        <ListContent>
+                                            <ListName>{list.name}</ListName>
+                                            <ListProfessor>{list.professor}</ListProfessor>
+                                        </ListContent>
+                                        <ListRating>{Number.isInteger(list.total_rating)?`${list.total_rating}.0`:list.total_rating.toFixed(1)}</ListRating>
                                     </LectureRankingListWrapper>
                                 </LectureRankingList>
                             )
                         }):null}
-                    </LectureRankingListUlWrapper>
+                    </LectureRankingLists>
                 </LectureRankingWrapper>
-            </LectureRankingSectionWrapper>
+            </LectureRankingSection>
         </>
     )
 }
 
-export default MainPageLectureRanking;
+export default LectureRanking;

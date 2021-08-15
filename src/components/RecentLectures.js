@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from 'react';
 import styled from 'styled-components';
 
-const MainPageRecentLectureSection = styled.section`
+const RecentLectureSection = styled.section`
     width:100%;
     margin:10px auto;
     @media(min-width:575px){
@@ -10,7 +10,7 @@ const MainPageRecentLectureSection = styled.section`
     }
 `;
 
-const MainPageRecentLectureTitleWrapper = styled.div`
+const RecentLectureTitle = styled.div`
     width:90%;
     margin:0 auto;
     margin-bottom:5px;
@@ -23,7 +23,7 @@ const MainPageRecentLectureTitleWrapper = styled.div`
     }
 `;
 
-const MainPageRecentLectureWrapper = styled.div`
+const RecentLectureWrapper = styled.div`
     border:1px solid rgb(238, 238, 238);
     border-radius:15px;
     width:90%;
@@ -37,14 +37,14 @@ const MainPageRecentLectureWrapper = styled.div`
     }
 `
 
-const MainPageRecentLectureContentUl = styled.ul`
+const RecentLectureContents= styled.ul`
     display:flex;
     flex-direction:column;
     align-items:center;
     padding-left:0px;
 `;
 
-const MainPageRecentLectureContentLi = styled.li`
+const RecentLectureContent = styled.li`
     width:100%;
     list-style:none;
     height:80px;
@@ -56,14 +56,14 @@ const MainPageRecentLectureContentLi = styled.li`
         height:59px;
     }
 `;
-const MainPageRecentLectureContentLeft = styled.div`
+const LeftContent = styled.div`
     display:flex;
     flex-direction:column;
     justify-content:center;
     width:200px;
     margin-left:20px;
 `;
-const MainPageRecentLectureContentLeftTitle = styled.div`
+const LeftContentTitle = styled.div`
     font-size:14px;
     font-weight:700;
     color:black;
@@ -71,19 +71,19 @@ const MainPageRecentLectureContentLeftTitle = styled.div`
         font-size:14px;
     }
 `;
-const MainPageRecentLectureContentLeftProfessor =styled.div`
+const LeftContentProfessor =styled.div`
     font-size:12px;
     @media(min-width:575px){
         font-size:12px;
     }
 `;
-const MainPageRecentLectureContentRight = styled.div`
+const RightContent = styled.div`
     width:30px;
     display:flex;
     align-items:center;
     margin-right:20px;
 `;
-const MainPageRecentLectureContentRightContentRating = styled.div`
+const RightContentRating = styled.div`
     font-size:20px;
     color:black;
     @media(min-width:575px){
@@ -101,7 +101,7 @@ export const LECENT_LECTURES = [
     {name:'사랑의 히스토리',professor:'김하트',rating:'3.2',id:'사랑의역사김하트3'}
 ]
 
-const MainPageRecentLecture = () => {
+const RecentLecture = () => {
 
     const [recentLectures,setRecentLectures] = useState([]);
 
@@ -111,28 +111,28 @@ const MainPageRecentLecture = () => {
 
     return(
         <>
-            <MainPageRecentLectureSection>
-                <MainPageRecentLectureTitleWrapper>최근 본 강의</MainPageRecentLectureTitleWrapper>
-                <MainPageRecentLectureWrapper>
-                    <MainPageRecentLectureContentUl>
+            <RecentLectureSection>
+                <RecentLectureTitle>최근 본 강의</RecentLectureTitle>
+                <RecentLectureWrapper>
+                    <RecentLectureContents>
                         {recentLectures.map((list,index)=>{
                             return(
-                                <MainPageRecentLectureContentLi active={index===4} key={list.id}>
-                                    <MainPageRecentLectureContentLeft>
-                                        <MainPageRecentLectureContentLeftTitle>{list.name}</MainPageRecentLectureContentLeftTitle>
-                                        <MainPageRecentLectureContentLeftProfessor>{list.professor}</MainPageRecentLectureContentLeftProfessor>
-                                    </MainPageRecentLectureContentLeft>
-                                    <MainPageRecentLectureContentRight>
-                                        <MainPageRecentLectureContentRightContentRating>{list.rating}</MainPageRecentLectureContentRightContentRating>
-                                    </MainPageRecentLectureContentRight>
-                                </MainPageRecentLectureContentLi>
+                                <RecentLectureContent active={index===4} key={list.id}>
+                                    <LeftContent>
+                                        <LeftContentTitle>{list.name}</LeftContentTitle>
+                                        <LeftContentProfessor>{list.professor}</LeftContentProfessor>
+                                    </LeftContent>
+                                    <RightContent>
+                                        <RightContentRating>{list.rating}</RightContentRating>
+                                    </RightContent>
+                                </RecentLectureContent>
                             )
                         })}
-                    </MainPageRecentLectureContentUl>
-                </MainPageRecentLectureWrapper>
-            </MainPageRecentLectureSection>
+                    </RecentLectureContents>
+                </RecentLectureWrapper>
+            </RecentLectureSection>
         </>
     )
 }
 
-export default MainPageRecentLecture;
+export default RecentLecture;

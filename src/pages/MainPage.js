@@ -1,8 +1,8 @@
 import React,{useState,useEffect} from 'react';
-import MainBigPage from './BigPage';
-import MainSmallPage from '../components/smallpage/MainSmallPage';
-import MainPageBigHeader from '../components/bigpage/Header';
-import MainPageSmallHeader from '../components/smallpage/MainPageSmallHeader';
+import BigPage from '../pages/BigPage';
+import SmallPage from '../pages/SmallPage';
+import BigHeader from '../components/bigpage/BigHeader';
+import SmallHeader from '../components/smallpage/SmallHeader';
 
 const MainPage = () => {
 
@@ -28,13 +28,13 @@ const MainPage = () => {
 
         {isMobile?(
             <>
-                <MainPageSmallHeader/>
-                <MainSmallPage/>
+                <SmallHeader/>
+                <SmallPage/>
             </>
         ):(
             <>
-                <MainPageBigHeader/>
-                <MainBigPage/>
+                <BigHeader/>
+                <BigPage/>
             </>
         )}
     </>

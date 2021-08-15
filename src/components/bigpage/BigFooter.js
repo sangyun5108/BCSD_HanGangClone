@@ -110,7 +110,7 @@ const HomeIcon = styled.img`
     height:31px;
 `;
 
-const MainBigPageFooter = () => {
+const BigFooter = () => {
     return (
         <>
             <Footer>
@@ -154,4 +154,4 @@ const MainBigPageFooter = () => {
     );
 }
 
-export default MainBigPageFooter;
+export default BigFooter;

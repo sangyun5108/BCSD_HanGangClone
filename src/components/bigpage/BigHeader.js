@@ -84,7 +84,7 @@ const LEFT_CONTENTS = [
     {name:'시간표',id:'시간표'}
 ]
 
-const MainPageBigHeader = () => {
+const BigHeader = () => {
 
     const [isSelected,setIsSelected] = useState('홈');
     
@@ -124,4 +124,4 @@ const MainPageBigHeader = () => {
     );
 }
 
-export default MainPageBigHeader;
+export default BigHeader;

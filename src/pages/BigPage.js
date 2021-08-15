@@ -1,11 +1,11 @@
 import React from 'react';
-import MainPageLectureRanking from '../components/MainPageLectureRanking';
+import LectureRanking from '../components/LectureRanking';
 import styled from 'styled-components';
-import MainPageDepartmentList from '../components/MainPageDepartmentList';
-import MainPageTimeTable from '../components/MainPageTimeTable';
-import MainPageLectureMaterial from '../components/MainPageLectureMaterial';
-import MainPageRecentLecture from '../components/MainPageRecentLectures';
-import MainBigPageFooter from '../components/bigpage/Footer';
+import Department from '../components/Department';
+import TimeTable from '../components/TimeTable';
+import LectureMaterial from '../components/LectureMaterial';
+import RecentLecture from '../components/RecentLectures';
+import BigFooter from '../components/bigpage/BigFooter';
 
 const MainPage = styled.main`
 `;
@@ -68,18 +68,18 @@ const MainBigPage = () => {
                     </BannerContent>
                     <BannerImage src='https://hangang-storage.s3.ap-northeast-2.amazonaws.com/assets/img/indexpage/represent.svg'/>
                 </Banner>
-                <MainPageDepartmentList/>
+                <Department/>
                 <MainSections>
-                    <MainPageLectureRanking/>
+                    <LectureRanking/>
                     <ExceptLectureRanking>
-                        <MainPageLectureMaterial/>
+                        <LectureMaterial/>
                         <TimeTableRecentLecture>
-                            <MainPageTimeTable/>
-                            <MainPageRecentLecture/>
+                            <TimeTable/>
+                            <RecentLecture/>
                         </TimeTableRecentLecture>
                     </ExceptLectureRanking>
                 </MainSections>
-                <MainBigPageFooter/>
+                <BigFooter/>
             </MainPage>
         </>
     );

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 
-const TimeTableSectionWrapper = styled.section`
+const TimeTableSection = styled.section`
     width:100%;
     margin: 0 auto;
     margin-top:10px;
@@ -10,7 +10,7 @@ const TimeTableSectionWrapper = styled.section`
         width:370px;
     }
 `;
-const TimeTableTitleWrapper = styled.h1`
+const TimeTableTitle = styled.h1`
     width:90%;
     margin: 0px auto;
     font-size:16px;
@@ -37,7 +37,7 @@ const TimeTableWrapper = styled.div`
     }
 `;
 
-const TimeTableUl = styled.ul`
+const TimeTableLists = styled.ul`
     width:100%;
     height:304px;
     padding-left:0px;
@@ -51,7 +51,7 @@ const TimeTableList = styled.li`
     justify-content:space-between;
 `;
 
-const TimeTableListLeftContents = styled.div`
+const LeftContents = styled.div`
     height:75px;
     width:200px;
     display:flex;
@@ -59,7 +59,7 @@ const TimeTableListLeftContents = styled.div`
     justify-content:center;
 `;
 
-const TimeTableListLeftContentTitle = styled.div`
+const LeftContentTitle = styled.div`
     font-weight:700;
     font-size:14px;
     @media(min-width:575px){
@@ -67,7 +67,7 @@ const TimeTableListLeftContentTitle = styled.div`
     }
 `;
 
-const TimeTableListLeftContentProfessor = styled.div`
+const LeftContentProfessor = styled.div`
     font-size:12px;
     color:#999999;
     @media(min-width:575px){
@@ -75,14 +75,14 @@ const TimeTableListLeftContentProfessor = styled.div`
     }
 `;
 
-const TimeTableListRightContents = styled.div`
+const RightContents = styled.div`
     width:100px;
     display:flex;
     justify-content:center;
     align-items:center;
 `;
 
-const TimeTableListRightButton = styled.button`
+const EvaluateButton = styled.button`
     width:60px;
     height:28px;
     border:none;
@@ -104,31 +104,31 @@ const TIMETABLE_LIST = [
     {name:'사랑의 역사',professor:'김사랑',evaluate:'평가하기',rating:3.2,id:'사랑의 역사3'}
 ]
 
-const MainPageTimeTable = () => {
+const TimeTable = () => {
     return(
         <>
-            <TimeTableSectionWrapper>
-                <TimeTableTitleWrapper>내 시간표</TimeTableTitleWrapper>
+            <TimeTableSection>
+                <TimeTableTitle>내 시간표</TimeTableTitle>
                 <TimeTableWrapper>
-                    <TimeTableUl>
+                    <TimeTableLists>
                         {TIMETABLE_LIST.map((list,index)=>{
                             return(
                                 <TimeTableList key={list.id} active={index===3}>
-                                    <TimeTableListLeftContents>
-                                        <TimeTableListLeftContentTitle>{list.name}</TimeTableListLeftContentTitle>
-                                        <TimeTableListLeftContentProfessor>{list.professor}</TimeTableListLeftContentProfessor>
-                                    </TimeTableListLeftContents>
-                                    <TimeTableListRightContents>
-                                        <TimeTableListRightButton active={list.evaluate==='평가완료'}>{list.evaluate}</TimeTableListRightButton>
-                                    </TimeTableListRightContents>
+                                    <LeftContents>
+                                        <LeftContentTitle>{list.name}</LeftContentTitle>
+                                        <LeftContentProfessor>{list.professor}</LeftContentProfessor>
+                                    </LeftContents>
+                                    <RightContents>
+                                        <EvaluateButton active={list.evaluate==='평가완료'}>{list.evaluate}</EvaluateButton>
+                                    </RightContents>
                                 </TimeTableList>
                             )
                         })}
-                    </TimeTableUl>
+                    </TimeTableLists>
                 </TimeTableWrapper>
-            </TimeTableSectionWrapper>
+            </TimeTableSection>
         </>
     );
 }
 
-export default MainPageTimeTable;
+export default TimeTable;
