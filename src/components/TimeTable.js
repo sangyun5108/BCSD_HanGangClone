@@ -61,14 +61,14 @@ const LeftContents = styled.div`
 
 const LeftContentTitle = styled.div`
     font-weight:700;
-    font-size:14px;
+    font-size:16px;
     @media(min-width:575px){
         font-size:14px;
     }
 `;
 
 const LeftContentProfessor = styled.div`
-    font-size:12px;
+    font-size:14px;
     color:#999999;
     @media(min-width:575px){
         font-size:12px;
@@ -86,7 +86,7 @@ const EvaluateButton = styled.button`
     width:60px;
     height:28px;
     border:none;
-    font-size:12px;
+    font-size:13px;
     border-radius:15px;
     background-color:${props=>props.active?'':'#238bfe'};
     color:${props=>props.active?'':'#ffffff'};
