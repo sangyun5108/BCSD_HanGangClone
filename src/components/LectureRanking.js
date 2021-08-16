@@ -134,7 +134,7 @@ const ListOrder = styled.div`
 const ListContent = styled.div`
     width:70%;
     display:flex;
-    font-size:14px;
+    font-size:16px;
     flex-direction:column;
     justify-content:center;
     @media(min-width:575px){
@@ -143,7 +143,7 @@ const ListContent = styled.div`
 `;
 const ListRating = styled.div`
     width:15%;
-    font-size:18px;
+    font-size:20px;
     height:75px;
     display:flex;
     align-items:center;
@@ -162,7 +162,7 @@ const ListName = styled.div`
     }
 `;
 const ListProfessor = styled.div`
-    font-size:12px;
+    font-size:14px;
     color:rgb(153, 153, 153);
     @media(min-width:575px){
         width:180px;
