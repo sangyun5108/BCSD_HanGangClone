@@ -197,22 +197,24 @@ const LectureRanking = () => {
                         </LectureRankingListsTitle>
                     </LectureRankingListTitleWrapper>
                     <LectureRankingLists>
-                        {error?(<>Error</>)
-                        :isLoading?(<></>)
-                        :data?(data.result).map((list,index)=>{
-                            return(
-                                <LectureRankingList key={list.id}>
-                                    <LectureRankingListWrapper active={index}>
-                                        <ListOrder>{index+1}</ListOrder>
-                                        <ListContent>
-                                            <ListName>{list.name}</ListName>
-                                            <ListProfessor>{list.professor}</ListProfessor>
-                                        </ListContent>
-                                        <ListRating>{Number.isInteger(list.total_rating)?`${list.total_rating}.0`:list.total_rating.toFixed(1)}</ListRating>
-                                    </LectureRankingListWrapper>
-                                </LectureRankingList>
-                            )
-                        }):null}
+                        {
+                            error?(<>Error</>)
+                            :isLoading?(<></>)
+                            :data?(data.result).map((list,index)=>{
+                                return(
+                                    <LectureRankingList key={list.id}>
+                                        <LectureRankingListWrapper active={index}>
+                                            <ListOrder>{window.matchMedia('(max-width:574px)').matches?index+1:`0${index+1}`}</ListOrder>
+                                            <ListContent>
+                                                <ListName>{list.name}</ListName>
+                                                <ListProfessor>{list.professor}</ListProfessor>
+                                            </ListContent>
+                                            <ListRating>{Number.isInteger(list.total_rating)?`${list.total_rating}.0`:list.total_rating.toFixed(1)}</ListRating>
+                                        </LectureRankingListWrapper>
+                                    </LectureRankingList>
+                                )
+                            }):null
+                        }
                     </LectureRankingLists>
                 </LectureRankingWrapper>
             </LectureRankingSection>
