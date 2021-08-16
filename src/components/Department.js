@@ -4,14 +4,16 @@ import { DEPARTMENT_LIST } from '../static/departmentList';
 
 const DepartmentSection = styled.section`
     width:100%;
+    padding:0px 15px 0px 15px;
     @media(min-width:575px){
         width:1150px;
         margin:0 auto;
+        padding:0px;
     }
 `;
 
 const DepartmentListTitle = styled.h1`
-    width:90%;
+    width:95%;
     font-size:16px;
     margin:15px auto 10px auto;
     font-weight:700;
@@ -22,8 +24,12 @@ const DepartmentListTitle = styled.h1`
 `
 
 const DepartmentListsWrapper = styled.div`
-    overflow:scroll;
-    padding-left:15px;
+    overflow:auto;
+    -ms-overflow-style:none;
+    scrollbar-width:none; 
+    ::-webkit-scrollbar {
+        display:none;
+    }
 
     @media(min-width:575px){
         width:1166.5px;
@@ -46,7 +52,7 @@ const DepartmentList = styled.li`
 const DepartmentListWrapper = styled.div`
     width:100px;
     height:87px;
-    margin:${props=>props.order===9?'5px 20px 5px 5px':'5px'};
+    margin:5px;
     border-radius:10px;
     background-image:url(${props=>props.active&&props.active});
     background-size:cover;
@@ -75,11 +81,11 @@ const Department = () => {
                 <DepartmentListTitle>학부별 탐색</DepartmentListTitle>
                 <DepartmentListsWrapper>
                         <DepartmentLists>
-                            {DEPARTMENT_LIST.map((list,index)=>{
+                            {DEPARTMENT_LIST.map((data,index)=>{
                                 return(
-                                    <DepartmentList key={list.id+100} onClick={()=>alert(`${list.title}학부입니다`)}>
-                                        <DepartmentListWrapper active={list.img} order={index}>
-                                            <DepartmentListContent active={index} className={list.title}>{list.title_long}</DepartmentListContent>
+                                    <DepartmentList key={data.id+100} onClick={()=>alert(`${data.title}학부입니다`)}>
+                                        <DepartmentListWrapper active={data.img}>
+                                            <DepartmentListContent active={index} className={data.title}>{data.title_long}</DepartmentListContent>
                                         </DepartmentListWrapper>
                                     </DepartmentList>
                                 )
