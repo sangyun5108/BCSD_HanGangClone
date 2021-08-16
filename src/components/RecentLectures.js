@@ -64,7 +64,7 @@ const LeftContent = styled.div`
     margin-left:20px;
 `;
 const LeftContentTitle = styled.div`
-    font-size:14px;
+    font-size:16px;
     font-weight:700;
     color:black;
     @media(min-width:575px){
@@ -72,7 +72,7 @@ const LeftContentTitle = styled.div`
     }
 `;
 const LeftContentProfessor =styled.div`
-    font-size:12px;
+    font-size:14px;
     @media(min-width:575px){
         font-size:12px;
     }
