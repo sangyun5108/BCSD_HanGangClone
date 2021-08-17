@@ -158,7 +158,7 @@ const ListName = styled.div`
     margin-bottom:5px;
     @media(min-width:575px){
         width:250px;
-        font-size:15px;     
+        font-size:14px;     
     }
 `;
 const ListProfessor = styled.div`
@@ -167,7 +167,7 @@ const ListProfessor = styled.div`
     @media(min-width:575px){
         width:180px;
         color:black;
-        font-size:13px;
+        font-size:12px;
     }
 `;
 
