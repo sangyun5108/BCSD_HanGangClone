@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react';
 import styled from 'styled-components';
-import MIN_WIDTH from '../static/minwidth';
+import MIN_WIDTH from '../../static/minwidth';
 
 const RecentLectureSection = styled.section`
     width:100%;

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import MainPage from "./pages/MainPage";
 import {createGlobalStyle} from 'styled-components';
-import { LECENT_LECTURES } from "./components/RecentLectures";
+import { LECENT_LECTURES } from "./components/shared/RecentLectures";
 
 const GlobalStyle = createGlobalStyle`
   *{

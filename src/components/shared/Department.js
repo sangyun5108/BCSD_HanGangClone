@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { DEPARTMENT_LIST } from '../static/departmentList';
-import MIN_WIDTH from '../static/minwidth';
+import { DEPARTMENT_LIST } from '../../static/departmentList';
+import MIN_WIDTH from '../../static/minwidth';
 
 const DepartmentSection = styled.section`
     width:100%;

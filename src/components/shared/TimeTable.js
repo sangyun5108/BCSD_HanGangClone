@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import MIN_WIDTH from '../static/minwidth';
+import MIN_WIDTH from '../../static/minwidth';
 
 const TimeTableSection = styled.section`
     width:100%;

@@ -1,10 +1,10 @@
 import React from 'react';
-import LectureRanking from '../components/LectureRanking';
+import LectureRanking from '../components/shared/LectureRanking';
 import styled from 'styled-components';
-import Department from '../components/Department';
-import TimeTable from '../components/TimeTable';
-import LectureMaterial from '../components/LectureMaterial';
-import RecentLecture from '../components/RecentLectures';
+import Department from '../components/shared/Department';
+import TimeTable from '../components/shared/TimeTable';
+import LectureMaterial from '../components/shared/LectureMaterial';
+import RecentLecture from '../components/shared/RecentLectures';
 import BigFooter from '../components/bigpage/BigFooter';
 import MIN_WIDTH from '../static/minwidth';
 

@@ -1,8 +1,8 @@
 import React,{useState} from 'react';
 import styled from 'styled-components';
-import { useGetLecturesQuery } from '../API/getGoodReviewLecturesAPI';
-import { DEPARTMENT_LIST } from '../static/departmentList';
-import MIN_WIDTH from '../static/minwidth';
+import { useGetLecturesQuery } from '../../API/getGoodReviewLecturesAPI';
+import { DEPARTMENT_LIST } from '../../static/departmentList';
+import MIN_WIDTH from '../../static/minwidth';
 
 const LectureRankingSection = styled.section`
     width:100%;
