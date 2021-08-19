@@ -6,6 +6,7 @@ import TimeTable from '../components/TimeTable';
 import LectureMaterial from '../components/LectureMaterial';
 import RecentLecture from '../components/RecentLectures';
 import BigFooter from '../components/bigpage/BigFooter';
+import MIN_WIDTH from '../static/minwidth';
 
 const MainPage = styled.main`
 `;
@@ -41,7 +42,7 @@ const MainSections = styled.section`
     display:flex;
     justify-content:center;
 
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
         margin-top:10px;
     }
 `;

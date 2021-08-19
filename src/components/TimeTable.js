@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components';
+import MIN_WIDTH from '../static/minwidth';
 
 const TimeTableSection = styled.section`
     width:100%;
     margin: 0 auto;
     margin-top:10px;
 
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
         width:370px;
     }
 `;
@@ -32,7 +33,7 @@ const TimeTableWrapper = styled.div`
     justify-content:center;
     align-items:center;
     
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
         width:360px;
     }
 `;
@@ -62,7 +63,7 @@ const LeftContents = styled.div`
 const LeftContentTitle = styled.div`
     font-weight:700;
     font-size:16px;
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
         font-size:14px;
     }
 `;
@@ -70,7 +71,7 @@ const LeftContentTitle = styled.div`
 const LeftContentProfessor = styled.div`
     font-size:14px;
     color:#999999;
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
         font-size:12px;
     }
 `;
@@ -91,7 +92,7 @@ const EvaluateButton = styled.button`
     background-color:${props=>props.active?'':'#238bfe'};
     color:${props=>props.active?'':'#ffffff'};
     cursor:pointer;
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
         width:60px;
         font-size:12px;
     }

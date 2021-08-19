@@ -2,12 +2,13 @@ import React,{useState} from 'react';
 import styled from 'styled-components';
 import { useGetLecturesQuery } from '../API/getGoodReviewLecturesAPI';
 import { DEPARTMENT_LIST } from '../static/departmentList';
+import MIN_WIDTH from '../static/minwidth';
 
 const LectureRankingSection = styled.section`
     width:100%;
     margin:0 auto;
 
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
         width:500px;
         height:420px;
 `;
@@ -18,7 +19,7 @@ const LectureRankingTitle = styled.h1`
     font-size:16px;
     font-weight:800;
     margin-bottom:10px;
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
      width:75px;
      margin: 0px 0px 5px 0px;
      font-weight:700; 
@@ -32,7 +33,7 @@ const LectureRankingWrapper = styled.div`
     margin:0 auto;
     border:1px solid rgb(238, 238, 238);
     border-radius:15px;
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
         width:482px;
         height:385px;
         margin-left:0px;
@@ -47,7 +48,7 @@ const LectureRankingListTitleWrapper = styled.div`
     }
     height:58px;
     font-weight:700;
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
         width:480px;
         height:50px;
         display:flex;
@@ -63,7 +64,7 @@ const LectureRankingListsTitle = styled.ul`
     display:flex;
     justify-content:center;
     padding-left:0px;
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
         width:480px;
         height:50px;
     }
@@ -81,7 +82,7 @@ const LectureRankingListTitle = styled.li`
     justify-content:center;
     align-items:center;
     color:${props=>props.active?'#238bfe':'rgb(153, 153, 153)'};
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
         width:38px;
         height:50px;
         margin:0px 4px 0px 4px;
@@ -92,7 +93,7 @@ const TitleContent = styled.div`
     width:100%;
     cursor:pointer;
     margin-bottom:${props=>props.active?'-2px':''};
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
         width:40px;
         font-size:12px;
     }
@@ -105,7 +106,7 @@ const LectureRankingLists = styled.ul`
 const LectureRankingListWrapper = styled.div`
     border-top:${props=>props.active===0?'':'1px solid rgb(238, 238, 238)'};
     display:flex;
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
         height:66px;
     }
 `;
@@ -113,7 +114,7 @@ const LectureRankingListWrapper = styled.div`
 const LectureRankingList = styled.li`
     width:100%;
     list-style:none;
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
         width:482px;
     }
 `;
@@ -124,7 +125,7 @@ const ListOrder = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
         color:#238bfe;
         font-size:18px;
         font-weight:600;
@@ -149,14 +150,14 @@ const ListRating = styled.div`
     align-items:center;
     justify-content:center;
 
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
         font-size:17px;
         height:65px;
     }
 `;
 const ListName = styled.div`
     margin-bottom:5px;
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
         width:250px;
         font-size:14px;     
     }
@@ -164,7 +165,7 @@ const ListName = styled.div`
 const ListProfessor = styled.div`
     font-size:14px;
     color:rgb(153, 153, 153);
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
         width:180px;
         color:black;
         font-size:12px;

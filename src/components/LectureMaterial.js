@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import MIN_WIDTH from '../static/minwidth';
 
 const LectureMaterialSection = styled.section`
     width:100%;
     margin:0 auto;
     margin-top:10px;
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
         width:650px;
         margin:0px;
     }
@@ -17,7 +18,7 @@ const LectureMaterialTitle = styled.h1`
     font-size:16px;
     font-weight:600;
     margin-bottom:5px;
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
         width:75px;
         margin:0px 0px 5px 0px;
     }

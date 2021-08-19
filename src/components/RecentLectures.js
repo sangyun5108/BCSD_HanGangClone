@@ -1,10 +1,11 @@
 import React,{useEffect,useState} from 'react';
 import styled from 'styled-components';
+import MIN_WIDTH from '../static/minwidth';
 
 const RecentLectureSection = styled.section`
     width:100%;
     margin:10px auto;
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
         margin: 10px 0px 0px 35px;
         width:254px;
     }
@@ -16,7 +17,7 @@ const RecentLectureTitle = styled.div`
     margin-bottom:5px;
     font-weight:700;
 
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
         width:100px;
         margin:0px;
         margin-bottom:5px;
@@ -31,7 +32,7 @@ const RecentLectureWrapper = styled.div`
     height:400px;
     color:grey;
 
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
         width:250px;
         height:300px;
     }
@@ -67,13 +68,13 @@ const LeftContentTitle = styled.div`
     font-size:16px;
     font-weight:700;
     color:black;
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
         font-size:14px;
     }
 `;
 const LeftContentProfessor =styled.div`
     font-size:14px;
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
         font-size:12px;
     }
 `;
@@ -86,7 +87,7 @@ const RightContent = styled.div`
 const RightContentRating = styled.div`
     font-size:20px;
     color:black;
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
         font-size:15px;
     }
 `;

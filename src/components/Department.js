@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { DEPARTMENT_LIST } from '../static/departmentList';
+import MIN_WIDTH from '../static/minwidth';
 
 const DepartmentSection = styled.section`
     width:100%;
     padding:0px 15px 0px 15px;
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
         width:1150px;
         margin:0 auto;
         padding:0px;
@@ -18,7 +19,7 @@ const DepartmentListTitle = styled.h1`
     margin:15px auto 10px auto;
     font-weight:700;
 
-    @media(min-width:575px){
+    @media(${MIN_WIDTH}){
         margin:0px;     
     }
 `
